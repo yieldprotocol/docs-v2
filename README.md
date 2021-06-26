@@ -10,7 +10,6 @@ To enable fixed-rate, fixed-term borrowing and lending, Yield uses a class of to
 
 <figure class="image" align = "center">
   <img src="assets/mature.png" width = "400">
-  <figcaption><i>At maturity, fyDai are redeemable for Dai one to one</i></figcaption><br>
 </figure>
 
 fyTokens are analogous to zero-coupon bonds in the sense that they do not pay interest but instead trade at a discount, rendering a profit at maturity when it is redeemed for its full face value. The interest rate is calculated by the difference between the discounted value and the underlying asset's value at maturity.
