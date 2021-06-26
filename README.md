@@ -32,7 +32,7 @@ Now that you know how zero coupon bonds work, dive into the [Users](users) secti
 
 ## Contract Addresses
 
-## Audit
+### Audit
 Yield Protocol was audited by [Code 423n4](https://code423n4.com). You may find the report [here]().
 
 ## Community
