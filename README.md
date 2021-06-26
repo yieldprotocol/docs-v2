@@ -1,4 +1,4 @@
-# Introduction
+## Introduction
 
 Yield brings fixed-term, fixed-rate borrowing and lending to decentralized finance.
 
@@ -9,7 +9,44 @@ Today most of the popular decentralized finance protocols are floating-rate. Whi
 To enable fixed-rate, fixed-term borrowing and lending, Yield uses a class of tokens called *fyTokens(fixed yield tokens)*. fyTokens are Ethereum based ERC-20 tokens that can be redeemed for an underlying asset one-to-one after a predetermined maturity date. For example, if you have one fyDai token, you can redeem it for one Dai after the maturity date.
 
 <figure class="image" align = "center">
-  <img src="assets/mature.png" width="500" alt="fyDai at maturity" title="fyDai at maturity">
+  <img src="assets/mature.png" width="400" alt="fyDai at maturity" title="fyDai at maturity">
 </figure>
 
-fyTokens are analogous to zero-coupon bonds in the sense that they do not pay interest but instead trade at a discount, rendering a profit at maturity when it is redeemed for its full face value. The interest rate is calculated by the difference between the discounted value and the underlying asset's value at maturity.
+fyTokens are analogous to [zero-coupon bonds](https://www.investopedia.com/terms/z/zero-couponbond.asp) in the sense that they do not pay interest but instead trade at a discount, rendering a profit at maturity when it is redeemed for its full face value. The interest rate is calculated by the difference between the discounted value and the underlying asset's value at maturity.
+
+## An Example
+
+Suppose you buy 1 fyDai that settles exactly a year from today for 0.95 Dai. Your yield is fixed because you have a fixed amount of invested capital (0.95 Dai) and a known amount of future return (1 Dai, a year from now).
+
+A zero coupon bond's price is calculated by the following formula, where ***P*** is the price of the bond, ***M*** is the value of the underlying at maturity, ***r*** is the interest rate and ***n*** is the number of years to maturity.
+
+$$ P = \frac{M}{(1 + r)^n} $$
+
+Plugging our values in the formula and solving for r gives us our interest rate:
+
+$$ 0.95 = \frac{1}{(1 + r)^1} \leftrightarrow r = \frac{1}{0.95} - 1 = 0.0526 $$
+
+## Next Steps
+
+Now that you know how zero coupon bonds work, dive into the [Users](users) section if you want to learn how to use Yield Protocol, or into the [Developers](developers) if you are a developer looking to integrate with our smart contracts
+
+## Contract Addresses
+
+## Audit
+
+Yield Protocol was audited by [Code 423n4](https://code423n4.com). You may find the report [here]().
+
+## Community
+Users and the development team are usually in the [Discord server](https://discord.com/channels/752978124614008945).
+
+## Contributing
+If you have a contribution to make, please reach us out on Discord and we will consider it for a future release or product.
+
+## Vulnerability Disclosure
+Responsible security disclosures should be sent to [security@yield.is](security@yield.is). Thank you for keeping Yield safe! We will get back to you as soon as we can.
+
+## Useful Links
+> [Yield DApp](https://app.yield.is/)<br>
+> [Yield Docs](https://docs.yield.is/)<br>
+> [Yield Whitepaper](https://yield.is/yield.pdf)<br>
+> [YieldSpace AMM Whitepaper](https://yield.is/yieldspace.pdf)<br>
