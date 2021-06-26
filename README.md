@@ -14,7 +14,7 @@ To enable fixed-rate, fixed-term borrowing and lending, Yield uses a class of to
 
 fyTokens are analogous to [zero-coupon bonds](https://www.investopedia.com/terms/z/zero-couponbond.asp) in the sense that they do not pay interest but instead trade at a discount, rendering a profit at maturity when it is redeemed for its full face value. The interest rate is calculated by the difference between the discounted value and the underlying asset's value at maturity.
 
-## An Example
+### An Example
 
 Suppose you buy 1 fyDai that settles exactly a year from today for 0.95 Dai. Your yield is fixed because you have a fixed amount of invested capital (0.95 Dai) and a known amount of future return (1 Dai, a year from now).
 
@@ -26,27 +26,29 @@ Plugging our values in the formula and solving for r gives us our interest rate:
 
 $$ 0.95 = \frac{1}{(1 + r)^1} \leftrightarrow r = \frac{1}{0.95} - 1 = 0.0526 $$
 
-## Next Steps
+### Next Steps
 
 Now that you know how zero coupon bonds work, dive into the [Users](users) section if you want to learn how to use Yield Protocol, or into the [Developers](developers) if you are a developer looking to integrate with our smart contracts
 
 ## Contract Addresses
 
 ## Audit
-
 Yield Protocol was audited by [Code 423n4](https://code423n4.com). You may find the report [here]().
 
 ## Community
 Users and the development team are usually in the [Discord server](https://discord.com/channels/752978124614008945).
 
-## Contributing
+### Contributing
 If you have a contribution to make, please reach us out on Discord and we will consider it for a future release or product.
 
-## Vulnerability Disclosure
-Responsible security disclosures should be sent to [security@yield.is](security@yield.is). Thank you for keeping Yield safe! We will get back to you as soon as we can.
+### Bug Bounty
+Yield is offering bounties for bugs disclosed to us at [security@yield.is](security@yield.is). The bounty reward is up to $25,000, depending on severity. Please include full details of the vulnerability and steps/code to reproduce. We ask that you permit us time to review and remediate any findings before public disclosure.
 
 ## Useful Links
-> [Yield DApp](https://app.yield.is/)<br>
+> [Yield Dapp](https://app.yield.is/)<br>
 > [Yield Docs](https://docs.yield.is/)<br>
 > [Yield Whitepaper](https://yield.is/yield.pdf)<br>
 > [YieldSpace AMM Whitepaper](https://yield.is/yieldspace.pdf)<br>
+> [Github](https://github.com/yieldprotocol)<br>
+> [Discord Sever](https://discord.com/channels/752978124614008945)<br>
+> [Twitter](https://twitter.com/yield)<br>
