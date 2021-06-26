@@ -1,0 +1,11 @@
+table {
+   border: 1px solid black;
+ }
+ :root {
+   --link-color: #2B88DB;
+   --link-color--hover: #2B88DB;
+   --link-text-decoration--hover: underline;
+   --link-text-decoration: ;
+   --link-text-decoration-color--hover: #2B88DB;
+   --table-row-odd-background: ;
+ }

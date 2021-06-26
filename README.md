@@ -28,9 +28,11 @@ $$ 0.95 = \frac{1}{(1 + r)^1} \leftrightarrow r = \frac{1}{0.95} - 1 = 0.0526 $$
 
 ### Next Steps
 
-Now that you know how zero coupon bonds work, dive into the [Users](users) section if you want to learn how to use Yield Protocol, or into the [Developers](developers) if you are a developer looking to integrate with our smart contracts
+Now that you know how zero coupon bonds work, dive into the [Users](users/) section if you want to learn how to use Yield Protocol, or into the [Developers](developers) if you are a developer looking to integrate with our smart contracts
 
 ## Contract Addresses
+
+<!-- TODO: Will be available once released on mainnet -->
 
 ### Audit
 Yield Protocol was audited by [Code 423n4](https://code423n4.com). You may find the report [here]().
