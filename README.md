@@ -46,8 +46,7 @@ Yield is offering bounties for bugs disclosed to us at [security@yield.is](secur
 ### Contributing
 If you have a contribution to make, please reach us out on Discord and we will consider it for a future release or product.
 
-### Offline access
-
+### How To Setup
 You can run this documentation offline by using [Docsify](https://docsify.js.org/#/). Fork this repo, [install Docsify](https://docsify.js.org/#/quickstart) on your local machine, and then in the root folder of this repo, type `docsify serve`. The website will be served on port 3000 on your localhost: `localhost:3000`.
 
 ## We Are Hiring
