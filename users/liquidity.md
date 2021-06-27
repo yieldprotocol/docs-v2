@@ -17,7 +17,5 @@ The Yield Pool formula reduces the market impact suffered by traders of fyToken,
 
 The x-axis is the amount of fyDai sold. The y-axis is the implicit interest rate achieved by a borrower who is selling that amount of fyDai at one year to maturity. Borrowers obtain considerably better fyDai/Dai quotes (with better implied interest rates) by using the Yield Pool.
 
-<figure class="image" align = "center">
-  <img src="../assets/market_impact.png" width = 400>
-  <figcaption>YieldSpace consistently outperforms Uniswap on both interest rates and market quotes</figcaption>
-</figure>
+![](../assets/market_impact.png)<br>
+YieldSpace consistently outperforms Uniswap on both interest rates and market quotes</figcaption>

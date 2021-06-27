@@ -6,4 +6,7 @@
     - [Lending](users/lending.md "Yield Protocol Docs | Users Lending")
     - [Liquidity](users/liquidity.md "Yield Protocol Docs | Users Liquidity")
     - [Governance](users/governance.md "Yield Protocol Docs | Users Governance")
-- [Developers](developers.md "Yield Protocol Docs | Developers")
+- [Developers](/developers/ "Yield Protocol Docs | Developers")
+    - [Architecture](developers/architecture.md "Yield Protocol Docs | Developers Borrwoing")
+    - [Smart Contracts Overview](developers/smart_contracts_overview.md "Yield Protocol Docs | Developers Lending")
+    - [YieldSpace Contracts](developers/yieldspace_contracts.md "Yield Protocol Docs | Developers Liquidity")

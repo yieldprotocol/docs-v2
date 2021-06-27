@@ -1,4 +1,4 @@
-## User Documentation
+## Developer Documentation
 
 The Yield App is available at [https://app.yield.is](https://app.yield.is/).
 
