@@ -1,4 +1,4 @@
-### Lending
+# Lending
 
 To lend at a fixed rate, you simply have to buy fyTokens from our YieldSpace AMM at a discount.
 

@@ -1,4 +1,4 @@
-## Introduction
+# Introduction
 
 Yield brings fixed-term, fixed-rate borrowing and lending to decentralized finance.
 
@@ -28,7 +28,7 @@ $$ 0.95 = \frac{1}{(1 + r)^1} \leftrightarrow r = \frac{1}{0.95} - 1 = 0.0526 $$
 
 ### Next Steps
 
-Now that you know how zero coupon bonds work, dive into the [Users](users/) section if you want to learn how to use Yield Protocol, or into the [Developers](developers) if you are a developer looking to integrate with our smart contracts
+Now that you know how zero coupon bonds work, dive into the [Users](users/) section if you want to learn how to use Yield Protocol, or into the [Developers](developers/) if you are a developer looking to integrate with our smart contracts
 
 ## Contract Addresses
 
@@ -40,11 +40,18 @@ Yield Protocol was audited by [Code 423n4](https://code423n4.com). You may find 
 ## Community
 Users and the development team are usually in the [Discord server](https://discord.com/channels/752978124614008945).
 
+## Bug Bounty
+Yield is offering bounties for bugs disclosed to us at [security@yield.is](security@yield.is). The bounty reward is up to $25,000, depending on severity. Please include full details of the vulnerability and steps/code to reproduce. We ask that you permit us time to review and remediate any findings before public disclosure.
+
 ### Contributing
 If you have a contribution to make, please reach us out on Discord and we will consider it for a future release or product.
 
-### Bug Bounty
-Yield is offering bounties for bugs disclosed to us at [security@yield.is](security@yield.is). The bounty reward is up to $25,000, depending on severity. Please include full details of the vulnerability and steps/code to reproduce. We ask that you permit us time to review and remediate any findings before public disclosure.
+### Offline access
+
+You can run this documentation offline by using [Docsify](https://docsify.js.org/#/). Fork this repo, [install Docsify](https://docsify.js.org/#/quickstart) on your local machine, and then in the root folder of this repo, type `docsify serve`. The website will be served on port 3000 on your localhost: `localhost:3000`.
+
+## We Are Hiring
+You can check out our open roles here on our [careers](https://yield.is/careers) page.
 
 ## Useful Links
 > [Yield Dapp](https://app.yield.is/)<br>
