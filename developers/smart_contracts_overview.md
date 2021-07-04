@@ -56,7 +56,7 @@ We deploy one Join for each asset (collateral or underlying) that is accepted in
 
 The Join contract keeps track of the assets it should be holding, instead of relying on checking its balance at the asset contract. This allows removing the need for approvals in the integration with other contracts.
 
-// Ask Alberto to clarify - Sanket
+<!-- TODO: Expand upon and add more clarity -->
 
 ***Join***
 
@@ -72,7 +72,7 @@ Transfer an amount of any ERC20 other than asset to the given address,
 
 to enable airdrops to the Join.
 
-// Ask Alberto to clarify - Sanket
+<!-- TODO: Expand upon and add more clarity -->
 
 ***Flash Loans***
 
@@ -100,7 +100,7 @@ The `mint` and `burn` functions are restricted, and only the Ladle can call them
 
 Can be flash minted with no fees following the ERC3156 standard.
 
-// Expand upon more in need to - Sanket
+<!-- TODO: Expand upon -->
 
 For a given underlying asset, such as Dai, there would be a fyToken contract for each maturity. If, for example, we decide to have quarterly maturities for Dai in 2021, we would deploy 4 fyDai contracts: 31/03/21, 30/06/21, 30/09/21, and 31/12/21.
 
@@ -120,7 +120,7 @@ DataTypes.Vault records the owner, seriesId and ilkId.
 
 DataTypes.Balances record the vault debt(art) and vault collateral(ink). You use ink to draw art.
 
-// Ask Alberto why two structs for vaults - Sanket
+<!-- TODO: Ask Alberto why two structs for vaults - Sanket -->
 
 ### Stir and pour
 
@@ -132,7 +132,7 @@ It can be combined with `build` and `destroy` to split and merge vaults.
 
 `stir` and `pour` will revert if any affected vaults would be undercollateralized at the end of the transaction.
 
-//Ask Alberto why do we need both. It seems like they can be combined or one fulfills the needs.
+<!-- TODO: Ask Alberto why do we need both. It seems like they can be combined or one fulfills the needs. -->
 
 ### Debt after maturity
 
@@ -145,7 +145,7 @@ A different way to look at this mechanism
 - 1 fyDai of debt can always be repaid with 1 fyDai
 - 1 fyDai of debt can be paid with 1 Dai before maturity, or 1 Dai * rate_accrual after maturity, where `rate_accrual = borrowing_rate_now / borrowing_rate_at_maturity`
 
-// Not sure about the placement of this here - Sanket
+<!-- TODO: Not sure about the placement of this here - Sanket -->
 
 ## Collateralization
 

@@ -18,7 +18,7 @@ Yield does not currently have a token, nor are there plans to release one. As a 
 
 ### What are fyTokens?
 
-fyTokens are essentially tokenized loans. 
+fyTokens are building blocks of Yield Protocol and they essentially represent tokenized loans. 
 
 More concretely, fyTokens are Ethereum based ERC20 tokens that can be redeemed for an underlying asset one-to-one after a predetermined maturity date. fyTokens are analogous to zero-coupon bonds in the sense that they do not pay interest but instead trades at a discount, rendering a profit at maturity when it is redeemed for its full face value. The interest rate is calculated by the difference between the discounted value and the underlying asset's value at maturity. For example, if you have one fyDai token, you can redeem it for one Dai after the maturity date.  
 
@@ -28,25 +28,13 @@ Yield Protocol allows multiple assets to be borrowed or lent at a fixed rate.
 
 ### What assets can be used as collateral?
 
-Yield Protocol supports multiple assets as collateral to borrow multiple assets at fixed rate. You can view the available collateral at: [[COLLATERAL PAGE]]
+Yield Protocol supports multiple assets as collateral to borrow multiple assets at fixed rate. You can view the available collateral at: [Collateral Page]().
 
 ### How can I find you on uniswap?
 
-Yield does not have a governance token. You will not find us on Uniswap and you should be wary about any token claiming to be from Yield Protocol.
+Yield does not have a governance token yet. You will not find us on Uniswap and you should be wary about any token claiming to be from Yield Protocol.
 
-### Is Yield Protocol audited?
-
-Yes! By Trails of Bits, [here is the report](https://github.com/trailofbits/publications/blob/master/reviews/YieldProtocol.pdf).
-
-// For v2, we are doing a Code 432n4 (Code Arena) hacking contest instead, there will be a report the same as if we would have hired an audit company - Alberto
-
-// Will edit once more details are available - Sanket
-
-### Would there be an auto-roll feature?
-
-// We need to discuss this for v2. There are also three things that can be rolled: Debt, Lending, and Liquidity. - Alberto
-
-// I don't know if this is a "frequently" asked question. Might be better to change to "How can I roll my positions?" - Allan
+<!-- ### Would there be an auto-roll feature? -->
 
 ### Does the Yield Protocol have protocol fees?
 
@@ -55,20 +43,23 @@ At the moment, no.
 To ensure that the Yield Protocol has a path towards revenue for future development, v2 includes the ability to charge borrowers origination fees. At launch, these fees will be disabled. The decision to turn on the fees and at what levels are reserved for a future determination by the community.
 
 ### When Layer2?
+Currently we have no plans to move on to Layer 2 solutions!
 
-### Where does the fixed yield come from?
+### When was Yield launched?
+Yield was incubated at [Paradigm](https://www.paradigm.xyz) and the first version went live on 19 Oct 2020.
+
+<!-- ### Where does the fixed yield come from?
+From borrowers. Determined by the market supply and demand. -->
 
 ## Borrowing
 
 ### How to borrow?
 
-Visit us at [app.yield.is](http://app.yield.is) to get started. 
+Visit us at [app.yield.is](http://app.yield.is) to get started. You will need an Ethereum wallet(like [Metamask](https://metamask.io)), some ETH to pay for transaction fees and the base asset you would like to use as collateral. Once you have these things, you can choose the series from the app according to your needs and start the borrowing process.
 
 ### How much collateral is required for borrowing?
 
-The amount of collateral required depends on the collateral being provided. You can learn more about Yield's collateral requirements at: 
-
-// For v2, it will depend on the collateral/underlying pair
+The amount of collateral required depends on the collateral being provided and the underlying asset pair. 
 
 ### Do we earn interest on the deposited collateral?
 
@@ -84,7 +75,7 @@ A series represents a single borrowable asset with a defined maturity date. Each
 
 ### Can anyone set up a new series?
 
-No. Series are managed by Yield governance.
+No. Series are created manually for now and will be managed by Yield governance in the future.
 
 ### What happens if I don't close the loan at the time of maturity?
 
@@ -93,6 +84,9 @@ Loans held open past maturity accrue fees at a floating-rate APR. You may pay ba
 ### Borrowing and Lending rates look identical to me? How is that sustainable?
 
 For very small amounts the rates are very similar but as the trade grows in size the rates move away from each other.
+
+### What collateralization ratio should I choose to avoid liquidation?
+It depends on how much risk you want to take and how actively you plan to manage your positions. The lower your collateral ratio, the greater your risk of liquidation. If you don’t need to worry about getting liquidated and only need to top up your balance if there is a significant market decline then you can choose your collateralization ratio in the range of 250%-300%. If you know what you are doing and want to get as much leverage as possible out of your collateral then you can lower your collateralization ratio according to your needs.
 
 ## Lending
 
@@ -106,7 +100,7 @@ Yes! Purchasing fyTokens directly is equivalent to lending.
 
 ### Why is my current value as shown less than the amount I lent?
 
-When you lend, you are selling underlying asset into the pool and getting fyToken. When you close your position you are selling the fyToken and getting your underlying asset back. Both operations in the pool involve paying a fee of approximately 5% of the interest paid. The current value reflects the return on selling the fyToken in the pool, which reflects the trading fee, interest rate changes and slippage.
+When you lend, you are selling underlying asset into the pool and getting fyTokens. When you close your position you are selling the fyToken and getting your underlying asset back. Both operations in the pool involve paying a fee of approximately 5% of the interest paid. The current value reflects the return on selling the fyToken in the pool, which reflects the trading fee, interest rate changes and slippage.
 
 ### How do interest rate changes affect me as a lender?
 
@@ -142,19 +136,8 @@ No, liquidity providers earn fees from trading in that series between fyTokens a
 
 They are inversely correlated. If the fyToken price for a series increases, the interest rate for that series goes down.
 
-## Flashloans
-
-### What is a Flash Loan?
-
-A loan that requires no collateral from the borrower, but that needs to be repaid within the same transaction. They are commonly used for arbitrage or refinancing.
-
-### How does flash loan work?
-
-// Probably too advanced for an FAQ, maybe we just link something here. - Alberto
-
-// I might even remove this entire section. - Sanket
-
-// I think we should remove this section. -Allan
+### Is lending the same thing as providing liquidity?
+No! Lenders earn fixed-rate interest rates whereas liquidity providers' return depend on the fees earned by the pool and the path taken by interest rates.
 
 ## Liquidation
 
@@ -170,32 +153,47 @@ When the value of the collateral in a borrowing position becomes less than the v
 
 Anyone may liquidate an insufficiently collateralized borrowing position.
 
+## Security
+
+### Is Yield Protocol audited?
+
+Yes! Yield Protocol was audited by [Code 423n4](https://code423n4.com). You may find the report [here]().
+
+### What are the risks involved in using the protocol?
+There are two main risks involved in using the protocol: impermanent loss and smart contracts risks.
+
+Impermanent loss happens when you provide liquidity to a liquidity pool, and the price of your deposited assets changes compared to when you deposited them. In Yield Protocol, an impermanent loss is relatively low as it happens only when interest rates change. Interest rates would have to move a lot to make impermanent loss significant and as long as you stay in the pool until maturity, you will get all your assets back plus more.
+
+The other risk is that the smart contracts could get hacked although it's not exclusive to Yield. We take security extremely seriously and take every possible measure to ensure that this won't happen. Our system has been audited by [Code 423n4](https://code423n4.com) but it’s worth noting that audits don’t eliminate risks entirely.
+
+### Do you have a bug bounty program?
+
+Yes! We are offering bounties for bugs disclosed to us at [immunefi.com](https://immunefi.com/bounty/yieldprotocol). The bounty reward is up to $50,000, depending on severity. Please include full details of the vulnerability and steps/code to reproduce. We ask that you permit us time to review and remediate any findings before public disclosure.
+
 ## Miscellaneous
 
-### What is the fee structure?
+<!-- ### What is the fee structure? -->
 
 ### How is APR calculated?
+fyTokens interest rates are determined by the market.
 
 ### What is impermanent loss?
+Impermanent loss refers to a temporary loss caused to a liquidity provider due to the volatility in a trading pair. Impermanent loss happens when you provide liquidity to a liquidity pool, and the price of your deposited assets changes compared to when you deposited them. The bigger this change is, the more you are exposed to impermanent loss. In this case, the loss means less dollar value at the time of withdrawal than at the time of deposit.
 
 ### Is it right that you don't have impermanent loss as a Liquidity Provider in Yield?
 
 If you add liquidity to a pool and remove it only after maturity, you won't have a loss. If you remove your liquidity before maturity, your profit or loss will depend on the fees earned by the pool and the path taken by the interest rates.
 
-### How much does it cost to use the Yield Protocol?
-
-// This is outdated for v2, we need to come up with sample costs - Alberto
-
-// Removed it! I was unhappy with it anyways because it was intimidating to look at - Sanket
+### Does lending and borrowing happen in one transaction?
+Yes!
 
 ### What is YieldSpace?
 
 To improve the liquidity of fyTokens, Yield has designed an automated liquidity provider that is designed to enable efficient trading between fyTokens and their underlying assets. We call this new automated liquidity provider YieldSpace. You can read more about it in our [YieldSpace Whitepaper](https://yield.is/YieldSpace.pdf) to get a deeper understanding of the calculations and the overall mechanism. The Yield App integrates YieldSpace seamlessly into the user experience.
 
-### What are the possible risks involved in using the app?
+### What is a Flash Loan?
 
-### Do you have a bug bounty program?
+A loan that requires no collateral from the borrower, but that needs to be repaid within the same transaction. They are commonly used for arbitrage or refinancing.
 
-Yes! We are offering bounties for bugs disclosed to us at [security@yield.is](mailto:security@yield.is). The bounty reward is up to $25,000, depending on severity. Please include full details of the vulnerability and steps/code to reproduce. We ask that you permit us time to review and remediate any findings before public disclosure.
-
-// We should add the Immunefi bug bounty here.  [https://immunefi.com/bounty/yieldprotocol/](https://immunefi.com/bounty/yieldprotocol/)
+### How is Yield Governed?
+Currently Yield is governed by the founding team but we are committed to decentralization and will relinquish control of the protocol and give it to the community.

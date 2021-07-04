@@ -4,7 +4,7 @@ Yield brings fixed-term, fixed-rate borrowing and lending to decentralized finan
 
 Today most of the popular decentralized finance protocols are floating-rate. While floating-rate lending and borrowing is a powerful tool, it comes with significant drawbacks. These protocols may experience interest rate volatility that can make it difficult for you to plan for the future, make investment decisions, and properly hedge risk when borrowing and lending. Decentralized finance has several use cases that can be greatly improved with fixed-rate, fixed-term borrowing and lending.
 
-<!-- TODO: maybe we can create a blog post outlining use cases and link it here - Sanket -->
+<!-- TODO: maybe we can create a blog post outlining use cases and link it here -->
 
 To enable fixed-rate, fixed-term borrowing and lending, Yield uses a class of tokens called *fyTokens(fixed yield tokens)*. fyTokens are Ethereum based ERC-20 tokens that can be redeemed for an underlying asset one-to-one after a predetermined maturity date. For example, if you have one fyDai token, you can redeem it for one Dai after the maturity date.
 
@@ -37,11 +37,14 @@ Now that you know how zero coupon bonds work, dive into the [Users](users/) sect
 ### Audit
 Yield Protocol was audited by [Code 423n4](https://code423n4.com). You may find the report [here]().
 
+## Governance
+Currently Yield is governed by the founding team but we are committed to decentralization and will relinquish control of the protocol and give it to the community. 
+
 ## Community
 Users and the development team are usually in the [Discord server](https://discord.com/channels/752978124614008945).
 
 ## Bug Bounty
-Yield is offering bounties for bugs disclosed to us at [security@yield.is](security@yield.is). The bounty reward is up to $25,000, depending on severity. Please include full details of the vulnerability and steps/code to reproduce. We ask that you permit us time to review and remediate any findings before public disclosure.
+We are offering bounties for bugs disclosed to us at [immunefi.com](https://immunefi.com/bounty/yieldprotocol). The bounty reward is up to $50,000, depending on severity. Please include full details of the vulnerability and steps/code to reproduce. We ask that you permit us time to review and remediate any findings before public disclosure.
 
 ### Contributing
 If you have a contribution to make, please reach us out on Discord and we will consider it for a future release or product.
@@ -60,3 +63,4 @@ You can check out our open roles here on our [careers](https://yield.is/careers)
 > [Github](https://github.com/yieldprotocol)<br>
 > [Discord Sever](https://discord.com/channels/752978124614008945)<br>
 > [Twitter](https://twitter.com/yield)<br>
+> [Medium](https://medium.com/yield-protocol)<br>
