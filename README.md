@@ -37,9 +37,6 @@ Now that you know how zero coupon bonds work, dive into the [Users](users/) sect
 ### Audit
 Yield Protocol was audited by [Code 423n4](https://code423n4.com). You may find the report [here]().
 
-## Governance
-Currently Yield is governed by the founding team but we are committed to decentralization and will relinquish control of the protocol and give it to the community. 
-
 ## Community
 Users and the development team are usually in the [Discord server](https://discord.com/channels/752978124614008945).
 
@@ -51,6 +48,9 @@ If you have a contribution to make, please reach us out on Discord and we will c
 
 ### How To Setup
 You can run this documentation offline by using [Docsify](https://docsify.js.org/#/). Fork this repo, [install Docsify](https://docsify.js.org/#/quickstart) on your local machine, and then in the root folder of this repo, type `docsify serve`. The website will be served on port 3000 on your localhost: `localhost:3000`.
+
+## Governance
+Currently Yield is governed by the founding team but we are committed to decentralization and will relinquish control of the protocol and give it to the community. 
 
 ## We Are Hiring
 You can check out our open roles here on our [careers](https://yield.is/careers) page.
