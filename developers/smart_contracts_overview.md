@@ -147,7 +147,7 @@ A different way to look at this mechanism
 
 <!-- TODO: Not sure about the placement of this here - Sanket -->
 
-## Collateralization
+### Collateralization
 
 All vaults need to remain collateralized, or they will be at risk of liquidation.
 
@@ -155,7 +155,7 @@ A vault is collateralized if the value of its collateral is greater than the val
 
 `ink * price * ratio >= art * rate_accrual`
 
-## Liquidations
+### Liquidations
 
 For the protocol to not go bankrupt, it must act when the value of the collateral in the vaults risks being lower than the debt owed by the vaults.
 

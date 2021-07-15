@@ -14,7 +14,7 @@ YieldMath.sol uses Math64x64 to implement YieldSpace as described in the whitepa
 
 The Pool contracts are a DEX implementation very much in the style of Uniswap v2, but using YieldMath to calculate the trades.
 
-## Liquidity
+### Liquidity
 
 Each Pool must keep a balance of the two assets it trades: One underlying asset and one fyToken. The marginal interest rate currently offered by the Pool is determined from the relative levels of the reserves of the underlying asset and the fyToken.
 
@@ -24,13 +24,13 @@ When providing liquidity, assets must be provided in the same proportion as the 
 
 In a Pool, the fyToken balances must always be higher than the underlying balances for the curve not to go into negative territory. This means that there are always some fyTokens that cannot be purchased. An optimization already present in Yield v1 is that the supply of pool tokens is added to the fyToken balance when trading. These “virtual fyTokens”  allow us to safely reduce the amount of fyToken that must be kept in the Pools.
 
-// Ask Alberto how virtual fyTokens are exactly added and when. - Sanket
+<!-- TODO: Expand upon how virtual fyTokens are exactly added and when. - Sanket -->
 
 Since providing both underlying and fyToken is inconvenient, the Pool implements a `mintWithBase` function that allows the liquidity provider to provide only underlying, and a virtual trade will be done to convert a proportion of the underlying to fyToken inside the same pool. The amount of underlying to trade for fyToken must be calculated off-chain.
 
 In a similar vein, a `burnForBase` function allows liquidity providers to burn their pool tokens, and trade the fyToken received for underlying without any additional asset transfers, saving gas.
 
-## Trading
+### Trading
 
 The Pool allows the user to sell assets (underlying or fyToken). In this trade, the amount being sold is known, but not the amount being received. Within the same transaction, `sellBasePreview` or `sellFYTokenPreview` can be called to know the exact amount to be received.
 
@@ -50,7 +50,7 @@ Much like Uniswap v2 implements a Time-Weighted Average Price, Yield v2 implemen
 
 The Pool Factory deploys YieldSpace Pools using CREATE2.
 
-### PoolRouter
+## PoolRouter
 
 The Pool Router batches calls to Pools, along with wrapping/unwrapping of Ether, management of off-chain approvals, and transfers of tokens from users to pools to kickstart transactions.
 
