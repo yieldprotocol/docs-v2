@@ -8,5 +8,6 @@
     <!-- - [Governance](users/governance.md "Yield Protocol Docs | Users Governance") -->
 - [Developers](/developers/ "Yield Protocol Docs | Developers")
     <!-- - [Architecture](developers/architecture.md "Yield Protocol Docs | Developers Borrwoing") -->
-    - [Smart Contracts Overview](developers/smart_contracts_overview.md "Yield Protocol Docs | Developers Lending")
+    - [Addresses](developers/smart_contract_addresses.md "Yield Protocol Docs | Smart Contract Addresses")
+    - [Smart Contracts Overview](developers/smart_contracts_overview.md "Yield Protocol Docs | Smart Contracts Overview")
     - [YieldSpace Contracts](developers/yieldspace_contracts.md "Yield Protocol Docs | Developers Liquidity")

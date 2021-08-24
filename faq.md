@@ -6,15 +6,15 @@ If you can't find the answer to your question here, please ask us in [Discord](h
 
 ### Why Yield Protocol?
 
-The goal of the Yield Protocol is to bring fixed-term, fixed-rate borrowing and lending to decentralized finance. Today most of the popular decentralized finance protocols are floating-rate. While floating-rate lending/borrowing is a powerful tool, it comes with significant drawbacks. Decentralized finance has several use cases that can be greatly improved with fixed-rate, fixed-term borrowing, and lending.
+The goal of the Yield Protocol is to make fixed-rate borrowing and lending a fundamental part of decentralized finance. We believe that fixed-rate is essential to make it possible for defi to onboard its first billion users. 
 
 ### What differentiates Yield Protocol from other lending protocols?
 
-Yield pioneered fixed-rate, fixed-term borrowing and lending.
+Yield pioneered fixed-rate, fixed-term borrowing and lending. In our [whitepaper](https://yield.is/Yield.pdf), we were the first to show how fixed-rate, fixed-term borrowing and lending can be achieved by tokenizing loans that are analogous to zero-coupon bonds. We were also the first to create an automated market maker for tokenized loans in our [YieldSpace paper](https://yield.is/YieldSpace.pdf).
 
 ### Wen Token?
 
-Yield does not currently have a token, nor are there plans to release one. As a team, we believe in decentralization and building towards community control of the protocol. Right now, we believe that is best served by building, and growing community involvement. 
+Yield does not currently have a token, nor are there plans to release one. As a founding team, we believe in decentralization and building towards community control of the protocol. Right now, we believe that is best served by building, and growing community involvement. Long term we expect Yield Protocol to be community-owned and community controlled through a process of progressive decentralization. 
 
 ### What are fyTokens?
 
@@ -43,7 +43,7 @@ At the moment, no.
 To ensure that the Yield Protocol has a path towards revenue for future development, v2 includes the ability to charge borrowers origination fees. At launch, these fees will be disabled. The decision to turn on the fees and at what levels are reserved for a future determination by the community.
 
 ### When Layer2?
-Currently we have no plans to move on to Layer 2 solutions!
+Currently we have no plans to move on to Layer 2 solutions. We plan to constantly evaluate how Yield Protocol can find usage on a variety of different platforms. 
 
 ### When was Yield launched?
 Yield was incubated at [Paradigm](https://www.paradigm.xyz) and the first version went live on 19 Oct 2020.
@@ -63,7 +63,7 @@ The amount of collateral required depends on the collateral being provided and t
 
 ### Do we earn interest on the deposited collateral?
 
-Yield does pay interest on deposited collateral. 
+Yield does not currently pay interest on deposited collateral. 
 
 ### What is a Vault?
 
@@ -75,7 +75,7 @@ A series represents a single borrowable asset with a defined maturity date. Each
 
 ### Can anyone set up a new series?
 
-No. Series are created manually for now and will be managed by Yield governance in the future.
+No. Series are created by Yield governance.
 
 ### What happens if I don't close the loan at the time of maturity?
 
@@ -118,7 +118,11 @@ Portfolio value at maturity is the fyToken balance which represents the amount o
 
 ### What's the difference between pool and lend?
 
-You lend at a fixed rate. When you pool, you provide liquidity for both borrowing and lending. The returns to pooling depend on the fees earned by the pool and the path taken by interest rates.
+You lend at a fixed rate. When you pool, you provide liquidity for both borrowing and lending. The returns to pooling depend on the fees earned by the pool and the path taken by interest rates. Liquidity providers may also earn interest from fyTokens held by the liquidity pool.
+
+### What is a liquidity strategy?
+
+All liquidity providing through the Yield app is done through liquidity strategies. Liquidity Strategies are designed to provide liquidity to pools on your behalf and move the liquidity to new pools when your current pool expires after maturity. 
 
 ### Why would I want to be a Liquidity Provider?
 
@@ -162,20 +166,20 @@ Yes! Yield Protocol was audited by [Code 423n4](https://code423n4.com). You may 
 ### What are the risks involved in using the protocol?
 There are two main risks involved in using the protocol: impermanent loss and smart contracts risks.
 
-Impermanent loss happens when you provide liquidity to a liquidity pool, and the price of your deposited assets changes compared to when you deposited them. In Yield Protocol, an impermanent loss is relatively low as it happens only when interest rates change. Interest rates would have to move a lot to make impermanent loss significant and as long as you stay in the pool until maturity, you will get all your assets back plus more.
+Impermanent loss happens when you provide liquidity to a liquidity pool, and the price of your deposited assets changes compared to when you deposited them. In Yield Protocol, an impermanent loss is relatively low as it happens only when interest rates change. Interest rates would have to move a lot to make impermanent loss significant. And, as long as you stay in the pool until maturity, you will get all your assets back plus more.
 
-The other risk is that the smart contracts could get hacked although it's not exclusive to Yield. We take security extremely seriously and take every possible measure to ensure that this won't happen. Our system has been audited by [Code 423n4](https://code423n4.com) but it’s worth noting that audits don’t eliminate risks entirely.
+The other risk is that the smart contracts could get hacked. This is a risk of all DeFi protocols, and is not exclusive to Yield. We take security extremely seriously and take every possible measure to ensure that this won't happen. Our system has been audited by [Code 423n4](https://code423n4.com). Audits don't eliminate all risk, but they are the gold standard in checking for smart contract bugs. We are constantly working to catch bugs, and have created a bug bounty program to further lower risk. 
 
 ### Do you have a bug bounty program?
 
-Yes! We are offering bounties for bugs disclosed to us at [immunefi.com](https://immunefi.com/bounty/yieldprotocol). The bounty reward is up to $50,000, depending on severity. Please include full details of the vulnerability and steps/code to reproduce. We ask that you permit us time to review and remediate any findings before public disclosure.
+Yes! We are offering bounties for bugs disclosed to us at [immunefi.com](https://immunefi.com/bounty/yieldprotocol). The bounty reward is up to $250,000, depending on severity. Please include full details of the vulnerability and steps/code to reproduce. We ask that you permit us time to review and remediate any findings before public disclosure.
 
 ## Miscellaneous
 
 <!-- ### What is the fee structure? -->
 
 ### How is APR calculated?
-fyTokens interest rates are determined by the market.
+fyTokens interest rates are determined by the market rate from the appropriate liquidity pool.
 
 ### What is impermanent loss?
 Impermanent loss refers to a temporary loss caused to a liquidity provider due to the volatility in a trading pair. Impermanent loss happens when you provide liquidity to a liquidity pool, and the price of your deposited assets changes compared to when you deposited them. The bigger this change is, the more you are exposed to impermanent loss. In this case, the loss means less dollar value at the time of withdrawal than at the time of deposit.
@@ -196,4 +200,4 @@ To improve the liquidity of fyTokens, Yield has designed an automated liquidity 
 A loan that requires no collateral from the borrower, but that needs to be repaid within the same transaction. They are commonly used for arbitrage or refinancing.
 
 ### How is Yield Governed?
-Currently Yield is governed by the founding team but we are committed to decentralization and will relinquish control of the protocol and give it to the community.
+The founding team believes in decentralization and building towards community control of the protocol. Right now, we believe that is best served by building, and growing community involvement. Long term we expect Yield Protocol to be community-owned and community controlled through a process of progressive decentralization. 
