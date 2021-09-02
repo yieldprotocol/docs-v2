@@ -4,11 +4,13 @@ Yield brings fixed-term, fixed-rate borrowing and lending to decentralized finan
 
 Today most of the popular decentralized finance protocols are floating-rate. While floating-rate lending and borrowing is a powerful tool, it comes with significant drawbacks. These protocols may experience interest rate volatility that can make it difficult for you to plan for the future, make investment decisions, and properly hedge risk when borrowing and lending. Decentralized finance has several use cases that can be greatly improved with fixed-rate, fixed-term borrowing and lending.
 
-In this documentation, you can learn more about how the Yield Protocol works, and how to learn more. 
+In this documentation, you can learn more about how the Yield Protocol works, how to get started, and how to learn more. 
 
 <!-- TODO: maybe we can create a blog post outlining use cases and link it here -->
 
 ## About
+
+Yield Protocol is an Ethereum-based protocol for collateralized fixed-rate, fixed-term borrowing and lending. 
 
 To enable fixed-rate, fixed-term borrowing and lending, Yield uses a class of tokens called *fyTokens(fixed yield tokens)*. fyTokens are Ethereum based ERC-20 tokens that can be redeemed for an underlying asset one-to-one after a predetermined maturity date. For example, if you have one fyDai token, you can redeem it for one Dai after the maturity date.
 
@@ -49,7 +51,7 @@ If you have a contribution to make, please reach us out on Discord and we will c
 
 ## Governance
 
-Yield Protocol does not currently have a governance token. We are committed to making Yield Protocol a community-owned, community-run protocol. If you'd like to help shape the future of the protocol, please get involved by joining our [community](#Community).
+Yield Protocol does not currently have a governance token. Currently, most of the maintenance and development of the protocol is performed by the founding development team. The development team is committed to making Yield Protocol a community-owned, community-run protocol by progressive decentralization. If you'd like to help shape the future of the protocol, please get involved by joining our [community](#Community). 
 
 ## We Are Hiring
 You can check out our open roles here on our [careers](https://yield.is/careers) page.
