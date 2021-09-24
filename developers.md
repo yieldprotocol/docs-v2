@@ -1,6 +1,0 @@
-# Developers
-
-## Architecture
-
-
-
