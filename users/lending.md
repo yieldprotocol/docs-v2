@@ -1,8 +1,22 @@
 # Lending
 
-To lend at a fixed rate, you simply have to buy fyTokens from our YieldSpace AMM at a discount.
+To lend, you first access the "Lend" tab in the [Yield v2 App](https://app.yieldprotocol.com/#/lend).
 
-The discount you receive from the face value of the fyToken locks in a fixed return that can be calculated based on the time to maturity.
+When you lend in Yield, you are buying future cash payments at a discount. These future cash payments are represented by tokens that we call “fyTokens”. A fyToken is a token that can be redeemed one-for-one for a base asset on some future date. FyTokens don’t pay interest themselves, rather the interest is determined by the difference between the face value of the token and the price you pay for it. 
+
+The fixed interest rate you receive when lending is determined by a built-in automated market, and the more you lend, the lower your interest rate may be. 
+
+## Quick Start
+
+Lending on the Yield Protocol is a very simple process. You choose an asset you want to lend and you review and initiate the transaction. The first step is selecting the base asset that you want to lend. You can lend assets such as Dai, USDC, and USDT. Once you’ve selected the asset, you can indicate the amount of the asset you wish to lend. 
+
+Once you’ve entered an amount, you may select the series you wish to lend. Each series has a different maturity date. Yield currently provides quarterly maturity dates. Something to take into consideration: when selecting a series, you want to select a date that corresponds closely to the time you think you want to close the loan.
+
+
+
+## Lending Under the Hood
+
+To lend at a fixed rate, you simply buy fyTokens at a discount to their face value. The discount you receive is equivalent to locking in a fixed return that can be calculated based on the time until a fyToken can be redeemed. 
 
 For example, if on September 31, 2021, you buy 100 fyDai that matures in December 2021 for 98.8 Dai you will earn an implied rate of interest of 5% APR.
 
