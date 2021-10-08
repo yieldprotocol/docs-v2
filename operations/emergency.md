@@ -1,4 +1,4 @@
-# Emergency Procedures for Yield Finance
+# Emergency Procedures for Yield Protocol
 _Thanks to Yearn for providing the base for this document_
 
 ## TLDR: [Emergency Checklist](#emergency-checklist)
