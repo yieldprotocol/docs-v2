@@ -78,7 +78,7 @@ This acts as a guideline to follow when an incident is reported requiring immedi
 The primary objective is minimized the loss of funds, in particular for Yield's users. All decisions made should be driven by this goal.
 
 1. Open a private chat room (War Room) with a voice channel and invite only the team members that are online that can cover the [roles described above](#Roles). The War Room is limited to members that act in the capacities of the designated roles, as well as additional persons that can provide critical insight into the circumstances of the issue and how it can best be resolved.
-2. All the information that is gathered during the War Room should be considered private to the chat and not to be shared with third parties. Relevant data should be pinned and updated by the Facilitator for the team to have handy.
+2. All the information that is gathered during the War Room should be considered private to the chat and not to be shared with third parties. Relevant data should be pinned and updated by the Facilitator for the team to have handy. The Facilitator must log all relevant data and actions in a timeline to aid on preparing press releases and post-mortems.
 3. The team's first milestone is to assess the situation as quickly as possible: Confirming the reported information and determine how critical the incident is. A few questions to guide this process:
    - Is there confirmation from several team members/sources that the issue is valid? Are there example transactions that show the incident occurring? (Pin these in the War Room)
    - Is the Smart Contract Developer that knows the most about the code in the War Room? Can the Smart Contract Developer in question be reached? If not, can we reach the backup Smart Contract Developer?
