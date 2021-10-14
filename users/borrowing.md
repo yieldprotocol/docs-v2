@@ -1,6 +1,26 @@
 # Borrowing
 
-You can begin borrowing by accessing the borrowing [frontend]().
+You can begin borrowing by accessing the [Yield v2 App](https://app.yieldprotocol.com/#/borow).
+
+Borrowing on the Yield Protocol is a simple three step process. You choose an asset you want to borrow, you add collateral, and you review and initiate the transaction. 
+
+The fixed interest rate you receive when borrowing is determined by a built-in automated market, and the more you borrow, the higher your interest rate may be. All loans in Yield require overcollateralization with a greater value of collateral than debt. If you do not maintain a sufficient amount of collateral in your vault at all times, your vault may be liquidated.
+
+Yield permits you to borrow at a fixed rate for a fixed term, but you may repay early if you choose. Repaying early may result in you not receiving your original fixed rate, so give some consideration to how long you plan to have the loan when determining which maturity to borrow. 
+
+
+## Quick Start
+
+<!-- TODO: Add Quickstart -->
+
+
+The first step is selecting the base asset that you want to borrow. You can borrow assets like Dai, USDC, Tether, etc. Once you’ve selected the asset, you can indicate the amount of the asset you wish to borrow. 
+
+
+When adding your collateral, you can check if the collateral is sufficient with the collateralization indicator: In this case, the thumb is pointed up, which means your collateral is good. If the thumb is pointed down, your collateral is not sufficient enough and you will need to add more 
+
+
+## Borrowing Under the Hood
 
 To borrow, you deposit collateral in the protocol and draw new fyTokens against the collateral. You may proceed to sell the fyTokens for the underlying token, locking in your borrowing rate. Yield Protocol has a built-in automated market maker(AMM) called YieldSpace to enable efficient selling of fyTokens.
 
