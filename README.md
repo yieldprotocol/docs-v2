@@ -1,6 +1,6 @@
 # Introduction
 
-Yield brings fixed-term, fixed-rate borrowing and lending to decentralized finance.
+Yield Protocol brings fixed-term, fixed-rate borrowing and lending to decentralized finance.
 
 Today most of the popular decentralized finance protocols are floating-rate. While floating-rate lending and borrowing is a powerful tool, it comes with significant drawbacks. These protocols may experience interest rate volatility that can make it difficult for you to plan for the future, make investment decisions, and properly hedge risk when borrowing and lending. Decentralized finance has several use cases that can be greatly improved with fixed-rate, fixed-term borrowing and lending.
 

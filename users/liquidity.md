@@ -2,18 +2,14 @@
 
 Yield Protocol v2 relies on users called liquidity providers to provide essentially liquidity for borrowers and lenders. 
 
-To provide liquidity, you first access the "Pool" tab in the [Yield v2 App](https://app.yieldprotocol.com/#/pool).
+To provide liquidity, you first access the "Pool" tab in the [Yield v2 App](https://app.yieldprotocol.com/#/pool). Read our [Quick Start Guide NEED LINK]() for instructions. 
 
 Yield Protocol v2 has an improved the experience for providing liquidity. Users now contribute liquidity to strategies that support one Yield liquidity pool at a time. Pooling your liquidity earns you fees from borrowers and lenders. When the liquidity pool’s maturity date is reached, strategies automatically rollover liquidity from one pool to a later pool and require no user intervention.
 
 The various liquidity strategies rollover in a predefined way. The “three month” pool always rolls liquidity to the nearest dated pool. The six month pools, JD and MS, roll between predefined liquidity pools. The A pool rolls between the March and September series pools, and the B pool pool rolls between the June and December pools.  
 
-## Quick Start
+## YieldSpace Automated Liquidity Pools
 
-<!-- TODO: Add Quickstart -->
-
-
-## YieldSpace
 While fyTokens are ERC-20 assets and can be traded using existing protocols like Uniswap, those protocols are not optimized for fyTokens. To improve the liquidity of fyTokens, Yield has designed a new automated liquidity provider that is designed to enable efficient trading between fyTokens and their underlying assets. We call this new automated liquidity provider YieldSpace. You can read more about it in our [YieldSpace Whitepaper](https://yield.is/YieldSpace.pdf) to get a deeper understanding of the calculations and the overall mechanism. The Yield App integrates YieldSpace seamlessly into the user experience.
 
 YieldSpace pools improve on existing solutions by providing markets that quote at consistent interest rates over time, in the absence of trades. By quoting at a consistent interest rate, YieldSpace pools minimize losses from arbitrage.

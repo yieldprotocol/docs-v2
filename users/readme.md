@@ -6,4 +6,4 @@ Using the Yield App, you can borrow or lend assets at a fixed rate for a fixed t
 
 At the core of Yield are user-owned vaults representing a collateralized debt position. Each vault is associated with single collateral and debt in a single series.
 
-A series represents a single borrowable asset with a defined maturity date. Each series corresponds to a single ERC-20 fyToken. For example, Alice may own a vault with ETH collateral and debt in the USDC0925 series. The USDC0925 series represents an obligation to repay USDC on September 25th, 2021.
+A series represents a single borrowable asset with a defined maturity date. Each series corresponds to a single ERC-20 fyToken. For example, Alice may own a vault with ETH collateral and debt in the September 25th, 2021 USDC series which represents an obligation to repay USDC on that date.
