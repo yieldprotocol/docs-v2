@@ -1,64 +1,23 @@
+# Deployment
+
 ## Introduction
 
 
-This guide is valid for the 10.3 deployment of Yield v2.
+This guide is valid for the 11.6 deployment of Yield v2 (commit f5f0cb6).
 
 
 ```
-   "@yield-protocol/strategy-v2": "^0.10.0-rc0",
-   "@yield-protocol/utils-v2": "^2.4.0",
-   "@yield-protocol/vault-interfaces": "^2.3.0-rc1",
-   "@yield-protocol/vault-v2": "^0.10.0-rc5",
-   "@yield-protocol/yieldspace-interfaces": "^2.3.0-rc0",
-   "@yield-protocol/yieldspace-v2": "^0.10.0-rc2",
+   "@yield-protocol/strategy-v2": "^0.11.0-rc3",
+   "@yield-protocol/utils-v2": "^2.4.6",
+   "@yield-protocol/vault-interfaces": "^2.3.0-rc6",
+   "@yield-protocol/vault-v2": "^0.11.0-rc7",
+   "@yield-protocol/yieldspace-interfaces": "^2.3.0-rc6",
+   "@yield-protocol/yieldspace-v2": "^0.11.0-rc4",
 ```
+
+
 
 The deployment steps are numbered sequentially.
-
-
-## Permissioning
-
-
-The Yield v2 contracts have individual access control features for each permissioned function. At its very minimum, two actors will be needed to operate the protocol safely: The **governor** and the **operations team**. The permissions to the protocol of these two actors are channeled through the **Timelock** and the **EmergencyBrake**.
-
-
-### Actors
-
-
-**Governor**: The governor is an account with complete control over the protocol, through a timelock. It is expected to be an x-of-n multisig, or a governance contract.
-
-
-**Operations team**: The operations team has limited control to execute what is determined by governance. The AccessControl contract is implemented as a 1-of-n multisig and so individual members can directly be given permissions consistent with an operations role. In the future, an additional x-of-n multisig could be considered for the operations role.
-
-
-This is a minimal setup suitable for launch. Over time, as the protocol grows, it is expected that the governor and operations roles will be subdivided and possibly placed in a hierarchy, to reduce the risk profile of any individual account.
-
-
-### Timelock
-
-
-The **Timelock** has complete control over the protocol. It has the `ROOT` permission to all contracts, which allows the Timelock to `grant` and `revoke` permissions in all contracts. It also has permission to execute all the governance functions in all contracts. The Timelock can grant itself permission to execute non-governance functions in the contracts as well, even if that is not expected to be a common occurrence.
-
-
-In the Timelock, the **governor** has permissions to `propose`, `approve` and `execute`. In that sense the governor has complete control over the protocol, subject to the `delay` set in the Timelock, which is the only safety mechanism that protects the protocol after a governance takeover. It’s important to note that a governance takeover could well be fatal for the protocol and must be avoided at all costs.
-
-
-The governor is not expected to `propose` or `execute` proposals, and has those permissions as a protection against a coordinated attack by the operations team. The governor has no other permissions over the protocol apart from controlling the Timelock.
-
-
-In the Timelock, the **operations team** has permissions to `propose` and `execute`. The operations team can set up the proposals, and once they are approved by the governor, can execute them at an appropriate time.
-
-
-### EmergencyBrake
-
-
-The **EmergencyBrake** has a partial control over the granting and revoking permissions over the entire protocol. It has the `ROOT` permission to all contracts, but its implementation only allows the EmergencyBrake to grant and revoke permissions in a predetermined manner. The EmergencyBrake doesn’t have access to any permissioned function in any contract, it can’t grant permission to itself to any contract, and it is not expected to be granted any permission either.
-
-
-In the EmergencyBrake, the **Timelock** has the permission to `plan` emergencies, which will usually be set up in the same proposal that orchestrates new contracts. The Timelock also has permission to `restore` or `terminate` orchestrations that have been paused by the execution of a plan.
-
-
-In the EmergencyBrake, the **operations team** has the permission to `execute` plans, effectively pausing parts of the protocol.
 
 
 ## Configuration
@@ -93,7 +52,7 @@ For testing purposes we use a series of mock assets and oracle sources.
 
 
 ```
-npx hardhat run --network kovan core/01_mocks.ts
+npx hardhat run --network kovan mocks/01_mocks.ts
 ```
 
 
@@ -110,7 +69,7 @@ These steps are executed only once in the life of Yield v2. If they need to be e
 ### Libraries
 
 
-There are two external libraries used in the Yield v2 protocol. They are not orchestrated or permissioned, and store no data. They should never need to be redeployed.
+There are three external libraries used in the Yield v2 protocol (SafeERC20Namer, YieldMath, and PoolExtensions). They are not orchestrated or permissioned, and store no data. They should never need to be redeployed. This script also deploys PoolExtensionsWrapper.sol.
 
 
 ```
@@ -199,6 +158,7 @@ The oracles deployed are:
    compoundOracle: CompoundMultiOracle,
    compositeOracle: CompositeMultiOracle,
    cTokenOracle: CTokenMultiOracle,
+   uniswapOracle: UniswapV3Oracle,
 ```
 
 
@@ -346,7 +306,7 @@ To deploy the Wand, the Cauldron, Ladle, Witch and Factories need to have been d
 To execute the `makeBase` function, appropriate `chi` and `rate` data sources need to have been set in an oracle.
 
 
-To execute the `makeIlk` function, appropriate `spot` data sources need to have been set in an oracle.
+To execute the `makeIlk` function, appropriate `spot` data sources need to have been set in an oracle, and the collateral must have been enabled for liquidations in the Witch with `setIlk`.
 
 
 To execute the `addSeries` function, `makeBase` needs to have been executed first for the chosen underlying.
@@ -793,7 +753,10 @@ The script includes inside:
  - The string identifier in protocol.json of the IOracle with the baseId/ilkId pair. This can currently be the chainlinkOracle or the compositeOracle.
 
 
- - The collateralization ratio, with 6 decimal places. 1000000 = 100%.
+ - The collateralization ratio, with 6 decimal places. 1500000 = 150%.
+
+
+ - The reverse of the collateralization ratio, with 6 decimal places. 666666 = 66%.
 
 
  - The debt ceiling for the base/ilk pair, with some zeros added afterwards.
@@ -806,32 +769,35 @@ The script includes inside:
 
 
 ```
- const newIlks: Array<[string, string, string, number, number, number, number]> = [
-   // [DAI, stringToBytes6('TST1'), 'chainlinkOracle', 1000000, 1000000, 1, 18],
-   [DAI, DAI, CHAINLINK, 1000000, 1000000, 1, 18], // Constant 1
-   [DAI, USDC, CHAINLINK, 1000000, 1000000, 1, 18], // Via ETH
-   [DAI, ETH, CHAINLINK, 1000000, 1000000, 1, 18],
-   [DAI, WBTC, CHAINLINK, 1000000, 1000000, 1, 18], // Via ETH
-   [DAI, USDT, CHAINLINK, 1000000, 1000000, 1, 18], // Via ETH
-   [USDC, USDC, CHAINLINK, 1000000, 1000000, 1, 6], // Constant 1
-   [USDC, DAI, CHAINLINK, 1000000, 1000000, 1, 6], // Via ETH
-   [USDC, ETH, CHAINLINK, 1000000, 1000000, 1, 6],
-   [USDC, WBTC, CHAINLINK, 1000000, 1000000, 1, 6], // Via ETH
-   [USDC, USDT, CHAINLINK, 1000000, 1000000, 1, 6], // Via ETH
-   [USDT, USDT, CHAINLINK, 1000000, 1000000, 1, 18], // Constant 1
-   [USDT, DAI, CHAINLINK, 1000000, 1000000, 1, 18], // Via ETH
-   [USDT, USDC, CHAINLINK, 1000000, 1000000, 1, 18], // Via ETH
-   [USDT, ETH, CHAINLINK, 1000000, 1000000, 1, 18],
-   [USDT, WBTC, CHAINLINK, 1000000, 1000000, 1, 18], // Via ETH
-   [DAI, CDAI, CTOKEN, 1000000, 1000000, 1, 18],
-   [USDC, CUSDC, CTOKEN, 1000000, 1000000, 1, 6],
-   [USDT, CUSDT, CTOKEN, 1000000, 1000000, 1, 18],
+ // Input data: baseId, ilkId, oracle, ratio (1000000 == 100%), inv(ratio), line, dust, dec
+ const newIlks: Array<[string, string, string, number, number, number, number, number]> = [
+   [DAI, ETH, CHAINLINK, 1400000, 714000, 100000, 1, 18],
+   [DAI, DAI, CHAINLINK, 1000000, 1000000, 10000000, 0, 18], // Constant 1, no dust
+   [DAI, USDC, CHAINLINK, 1330000, 751000, 100000, 1, 18], // Via ETH
+   [DAI, WBTC, CHAINLINK, 1500000, 666000, 100000, 1, 18], // Via ETH
+//    [DAI, USDT, CHAINLINK, 1000000, 100000, 1, 18], // Via ETH
+   [USDC, ETH, CHAINLINK, 1400000, 714000, 100000, 1, 6],
+   [USDC, DAI, CHAINLINK, 1330000, 751000, 100000, 1, 6], // Via ETH
+   [USDC, USDC, CHAINLINK, 1000000, 1000000, 10000000, 0, 6], // Constant 1, no dust
+   [USDC, WBTC, CHAINLINK, 1500000, 666000, 100000, 1, 6], // Via ETH
+//    [USDC, USDT, CHAINLINK, 1000000, 100000, 1, 6], // Via ETH
+/*    [USDT, USDT, CHAINLINK, 1000000, 100000, 0, 18], // Constant 1, no dust
+   [USDT, DAI, CHAINLINK, 1000000, 100000, 1, 18], // Via ETH
+   [USDT, USDC, CHAINLINK, 1000000, 100000, 1, 18], // Via ETH
+   [USDT, ETH, CHAINLINK, 1000000, 100000, 1, 18],
+   [USDT, WBTC, CHAINLINK, 1000000, 100000, 1, 18], // Via ETH */
+//    [DAI, CDAI, CTOKEN, 1000000, 1000000, 1, 18],
+//    [USDC, CUSDC, CTOKEN, 1000000, 1000000, 1, 6],
+//    [USDT, CUSDT, CTOKEN, 1000000, 1000000, 1, 18],
  ]
 ```
 
 
 
 The script verifies that the Spot sources for the pairs supplied are present in the IOracle specified.
+
+
+The ilk is enabled in the Witch for liquidations, with the same `line`, `dust` and `dec` parameters as in the Cauldron.
 
 
 As part of this process, the Wand gives `EXIT` permissions to the Witch.  A plan is stored in the Cloak to remove this permission in an emergency. 
@@ -875,15 +841,10 @@ The script includes inside the bytes6 identifiers of:
 
 ```
  const newSeries: Array<[string, string, number, string[], string, string]> = [
-//    [stringToBytes6('DAI26'), DAI, EO2608, [TST1, TST2, TST3], 'DAI26', 'DAI26'],
-//    [stringToBytes6('DAI27'), DAI, EO2708, [TST1, TST2, TST3], 'DAI27', 'DAI27'],
-//    [stringToBytes6('DAI28'), DAI, EO2808, [TST1, TST2, TST3], 'DAI28', 'DAI28'],
-   [stringToBytes6('DAI1'), DAI, EOSEP21, [DAI, USDC, ETH, TST, WBTC, USDT], 'DAI1', 'DAI1'], // Sep21
-   [stringToBytes6('DAI2'), DAI, EODEC21, [DAI, USDC, ETH, TST, WBTC, USDT], 'DAI2', 'DAI2'], // Dec21
-   [stringToBytes6('USDC1'), USDC, EOSEP21, [USDC, DAI, ETH, TST, WBTC, USDT], 'USDC1', 'USDC1'],
-   [stringToBytes6('USDC2'), USDC, EODEC21, [USDC, DAI, ETH, TST, WBTC, USDT], 'USDC2', 'USDC2'],
-   [stringToBytes6('USDT1'), USDT, EOSEP21, [USDT, DAI, USDC, ETH, TST, WBTC], 'USDT1', 'USDT1'],
-   [stringToBytes6('USDT2'), USDT, EODEC21, [USDT, DAI, USDC, ETH, TST, WBTC], 'USDT2', 'USDT2']
+   [stringToBytes6('0104'), DAI,  EODEC21, [ETH, DAI, USDC, WBTC], 'FYDAI2112', 'FYDAI2112'], // Dec21
+   [stringToBytes6('0105'), DAI,  EOMAR22, [ETH, DAI, USDC, WBTC], 'FYDAI2203', 'FYDAI2203'], // Mar22
+   [stringToBytes6('0204'), USDC, EODEC21, [ETH, DAI, USDC, WBTC], 'FYUSDC2112', 'FYUSDC2112'],
+   [stringToBytes6('0205'), USDC, EOMAR22, [ETH, DAI, USDC, WBTC], 'FYUSDC2203', 'FYUSDC2203'],
  ]
 ```
 
@@ -919,11 +880,11 @@ The script reads the current fyTokens.json and pools.json to update it with the 
 ### Pool Initialization
 
 
-The initialization of pools can be done by bundling a transaction to transfer underlying to the pool, with a transaction to mint LP tokens. For testnet purposes a script to initialize all pools and skew them to a 5% rate is supplied. The Timelock is used as a transaction relayer.
+The initialization of pools can be done by bundling a transaction to transfer underlying to the pool, with a transaction to mint LP tokens. All pools are intialized by having the Timelock transfer an equivalent of $100 to the pool, with the LP tokens sent to the zero address.
 
 
 ```
-npx hardhat run --network kovan operations/40_initPools.ts
+npx hardhat run --network kovan operations/34_initPools.ts
 ```
 
 
@@ -941,22 +902,20 @@ The deployment of liquidity strategies is done with a script, in the same manner
 
 
 ```
-npx hardhat run --network kovan core/19_strategies.ts
+npx hardhat run --network kovan strategies/40_strategies.ts
 ```
 
 
 
-The input data for the script is located in config.ts. It includes the name and symbol for the strategy, as well as the bytes6 identifier for the base asset that will be common to all pools that the strategy works with.
+The script includes inside the init data: It includes the name and symbol for the strategy, as well as the bytes6 identifier for the base asset that will be common to all pools that the strategy works with.
 
 
 ```
 export const strategiesData: Array<[string, string, string]> = [ // name, symbol, baseId
-   ['DAI3M', 'DAI3M', DAI],
-   ['DAI6M', 'DAI6M', DAI],
-   ['USDC3M', 'USDC3M', USDC],
-   ['USDC6M', 'USDC6M', USDC],
-   ['USDT3M', 'USDT3M', USDT],
-   ['USDT6M', 'USDT6M', USDT]
+     ['YSDAIQ1', 'YSDAIQ1', DAI],
+     ['YSDAIQ2', 'YSDAIQ2', DAI],
+     ['YSUSDCQ1', 'YSUSDCQ1', USDC],
+     ['YSUSDCQ2', 'YSUSDCQ2', USDC],
 ]
 ```
 
@@ -988,24 +947,29 @@ The input data includes a string to be used as both name and symbol for the stra
 
 ```
 const strategiesInit: Array<[string, [string, string], [string, string]]> = [
-   ['DAI2S', 
-[stringToBytes6('DAI21'), stringToBytes6('DAI21')],
-[stringToBytes6('DAI22'), stringToBytes6('DAI22')]],
-   ['USDC2S', 
-[stringToBytes6('USDC21'), stringToBytes6('USDC21')],
-[stringToBytes6('USDC22'), stringToBytes6('USDC22')]],
-   ['USDT2S', 
-[stringToBytes6('USDT21'), stringToBytes6('USDT21')],
-[stringToBytes6('USDT22'), stringToBytes6('USDT22')]],
-   ['USDC3D', 
-[stringToBytes6('USDC26'), stringToBytes6('USDC26')],
-[stringToBytes6('USDC27'), stringToBytes6('USDC27')]],
- ]
+  // [strategyId, [startPoolId, startSeriesId],[nextPoolId,nextSeriesId]]
+  ['YSDAIQ1',
+    [stringToBytes6('0105'), stringToBytes6('0105')],
+    [stringToBytes6('0107'), stringToBytes6('0107')]
+  ],
+  ['YSDAIQ2',
+    [stringToBytes6('0104'), stringToBytes6('0104')],
+    [stringToBytes6('0106'), stringToBytes6('0106')]
+  ],
+  ['YSUSDCQ1',
+    [stringToBytes6('0205'), stringToBytes6('0205')],
+    [stringToBytes6('0207'), stringToBytes6('0207')]
+  ],
+  ['YSUSDCQ2',
+    [stringToBytes6('0204'), stringToBytes6('0204')],
+    [stringToBytes6('0206'), stringToBytes6('0206')]
+  ],
+]
 ```
 
 
 
-The strategy needs to be supplied with underlying to mint the initial Strategy tokens. We mint the underlying in testnets, but in mainnet it would be done with a transferFrom.
+The strategy needs to be supplied with underlying to mint the initial Strategy tokens. We mint the underlying in testnets, but in mainnet it would be done with a transfer from the Timelock.
 
 
 ```

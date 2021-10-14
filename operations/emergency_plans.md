@@ -1,27 +1,23 @@
-| Target | Contact                                                          | Function   | Hash                                                               |
-| ------ | ---------------------------------------------------------------- | ---------- | ------------------------------------------------------------------ |
-| Ladle  | Cauldron                                                         | Many       | 0x7611deeef15075034501d6a74fe594a33622de445aaa7cf40b890ecc64a90f01 |
-| Witch  | Cauldron                                                         |            | 0xd3d67bec050b7fcc78ae22e151edba7a6bd7d8f0d4f1318934d523586d8ebcef |
-| Wand   | Cauldron, Ladle, Witch, JoinFactory, FYTokenFactory, PoolFactory | Many       | 0xae4831012f1830ace893417d820c13e4045d4039d192aff22b5d61ce840ea5af |
-| Ladle  | ETHJoin                                                          | join, exit | 0x89606f0f01c76a76ec6e5aa0f0edab892779154c2028ba7b5a48f48fe515b5ac |
-| Ladle  | DAIJoin                                                          | join, exit | 0xfbd5c05608b25712f30be6df3a26db6e3306dc1dbba309fa0d3fbfcb6887c3fe |
-| Ladle  | USDCJoin                                                         | join, exit | 0xbb6e4d2a3bf0619422946a268d527e2811757c599985ad36d4032e0d1a2fabe8 |
-| Ladle  | WBTCJoin                                                         | join, exit | 0x50387ec5553747288b31f653839b482e5287cd135cfab5321f65405bd9d2cf9b |
-| Witch  | USDCJoin                                                         | join       | 0x50603f8e1fb52c16da63558f6f9d08867112e62484bf8677e15f78396d4d7673 |
-| Witch  | DAIJoin                                                          | join       | 0x804fd5817c70d1f9bb228b86f0777dd65a5418f93f9487bfcf37e8ac461a0241 |
-| Witch  | WBTCJoin                                                         | exit       | 0xfbd5c05608b25712f30be6df3a26db6e3306dc1dbba309fa0d3fbfcb6887c3fe |
-| Witch  | ETHJoin                                                          | exit       | 0x89606f0f01c76a76ec6e5aa0f0edab892779154c2028ba7b5a48f48fe515b5ac |
-| Witch  | USDCJoin                                                         | exit       | 0x50603f8e1fb52c16da63558f6f9d08867112e62484bf8677e15f78396d4d7673 |
-| Witch  | DAIJoin                                                          | exit       | 0x804fd5817c70d1f9bb228b86f0777dd65a5418f93f9487bfcf37e8ac461a0241 |
-| DAI01  | DAIJoin                                                          | DAI01      | 0x6f709fa0fdb1a72e0edac63ceda36dd987b1778d5aa1113ff0f23e7727c88f76 |
-| Ladle  | DAI01                                                            | DAI01      | 0xf80120bca1d45fcd730765cc62bc99482ae0f3bb5ee94e7dc2220be1a0412cf9 |
-| DAI02  | DAIJoin                                                          | DAI02      | 0x6f709fa0fdb1a72e0edac63ceda36dd987b1778d5aa1113ff0f23e7727c88f76 |
-| Ladle  | DAI02                                                            | DAI02      | 0xaa2840e9073de15fbca1d20b0fa4221d4718204892b062a454314cefe3a93246 |
-| USDC01 | USDCJoin                                                         | USDC01     | 0x57391f82263786fb13001f94e5bc904d284d674ce1be0b37d87adf36c1c8fd82 |
-| Ladle  | USDC01                                                           | USDC01     | 0x964bd0c16951fc5515c189365ca37c4764af5cea2fa50b11a1a59fc4b6bec21c |
-| USDC02 | USDCJoin                                                         | USDC02     | 0x57391f82263786fb13001f94e5bc904d284d674ce1be0b37d87adf36c1c8fd82 |
-| Ladle  | USDC02                                                           | USDC02     | 0x964bd0c16951fc5515c189365ca37c4764af5cea2fa50b11a1a59fc4b6bec21c |
-| USDC16 | USDCJoin                                                         | USDC16     | 0x095ebebbb9a70d33553e19d15ee32ea7e5e84e5b4ed19c3c8da8a28f00348ff6 |
-| Ladle  | USDC16                                                           | USDC16     | 0x77827d17b4ce13ba5cc5ea1147d78af94dfbc5c0e16677aa86e4b49cff19b77b |
-| USDC17 | USDCJoin                                                         | USDC17     | 0x1f3d48cc9319314eb40a34b92838efc275824606cc7691ce5d86a36f5303b96c |
-| Ladle  | USDC17                                                           | USDC17     | 0xa468af3bf9d324358634913f979733551d52a9bfc78a7735bfb479af13fbd9e9 |
+| Target  | Contact       | Hash                                                               |
+| ------- | ------------- | ------------------------------------------------------------------ |
+| ladle   | many          | 0xc1f1dae8978226eb1bf5ebc0b1781393f6f01e9354b39958c8cccf6c920302c2 |
+| witch   | many          | 0x6d3614dc98f251cf4cf6fb18d90222bfedb941c8838eb0d854e188d6fc308845 |
+| wand    | many          | 0xac2e68e39c2124e7a4492e2bd09520a1af75796043ee725fabde41ca21d0fe9b |
+| ladle   | join(00)      | 0x7452a3428132f68586d151c76ca634d2259f72e0c4aea0f232b46353a5f2e804 |
+| ladle   | join(01)      | 0x28e47a7b674fe4892f038059d52ab19a52b95b19412a0465c76fd4d0e492aa6a |
+| ladle   | join(02)      | 0x94ee0dfe124da4ee6f60223b2cd3f953836829fd96a66aebc7807b8b8d8e4401 |
+| ladle   | join(03)      | 0xd927dad7f2fd05f86d300e61032c9bf30461e992e35f5c9bda79840d5194683d |
+| witch   | join(01)      | 0x906e26be084d356cab0b4c10fc70f60ba3dd2cd16a0738cbd9610fa3be5cdec1 |
+| witch   | join(02)      | 0x4da134233ad1d18d3e1490af03563b7bb4aeaff1c8e600b8c3108d9fa4c55839 |
+| witch   | join(00)      | 0x866659f20b846756e0b9d49cd754ae82c2aa7d12a7b69ff6d2a94edc9d5b29c5 |
+| witch   | join(01)      | 0x0ef1c969f3f598c5f8a532bb12d939f4d642ea1b54e1a9598e8c5a0635cf9310 |
+| witch   | join(02)      | 0x71586bb525534a2513ae54fbb0217defba2186454caa6f8ffd9aea0a7e94233a |
+| witch   | join(03)      | 0xa1d4892e9091527e756277ba6be030b415930d05138c689dab142c774d64a6b6 |
+| ladle   | fyToken(0104) | 0xdf9cc13957f782fb3089afb45057f4a33026191197c1f8114269f1b23580f218 |
+| fyToken | join(01)      | 0xb57832cc65f255f1056984dfc9a3a090a17429069e4c0b0f5d0f34ac98077c45 |
+| ladle   | fyToken(0105) | 0x0f387913017110bc1abf30aad34d49b048eff03d9c9e971bcc000b5bca74026e |
+| fyToken | join(01)      | 0x8d76acb3929f1cf85a32a87f4242f1c36cef44d40ccc841e2b22ccc684b333e3 |
+| ladle   | fyToken(0204) | 0x597b0e958a26ae2b70df1e24d8a6fe2c2457849f6334c3b0f9b8f5b49f63331e |
+| fyToken | join(02)      | 0x848c9d21ee0022be2b24b3918126772a4610ee24cda9c4bc7769f67546d78b8f |
+| ladle   | fyToken(0205) | 0x399e4e95d488b58bbdf0a5bfac73b7198778a745d7f5596fbc7a1f8aa86d1141 |
+| fyToken | join(02)      | 0xc38c0e353f7d339ea8d2d04b8e6513d763b4fd9b0f4b5ff6a083da182caa4745 |
