@@ -1,6 +1,6 @@
 # Borrowing
 
-You can begin borrowing by accessing the [Yield v2 App](https://app.yieldprotocol.com/#/borow). Read our [Quick Start Guide NEED LINK]() for instructions. 
+You can begin borrowing by accessing the [Yield v2 App](https://app.yieldprotocol.com/#/borow). Read our [Quick Start Guide](https://medium.com/yield-protocol/yield-protocol-v2-quickstart-guide-e516a955a405) for instructions. 
 
 Borrowing on the Yield Protocol is a simple three step process. You choose an asset you want to borrow, you add collateral, and you review and initiate the transaction. 
 

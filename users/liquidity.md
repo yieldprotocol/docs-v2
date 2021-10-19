@@ -2,7 +2,7 @@
 
 Yield Protocol v2 relies on users called liquidity providers to provide essentially liquidity for borrowers and lenders. 
 
-To provide liquidity, you first access the "Pool" tab in the [Yield v2 App](https://app.yieldprotocol.com/#/pool). Read our [Quick Start Guide NEED LINK]() for instructions. 
+To provide liquidity, you first access the "Pool" tab in the [Yield v2 App](https://app.yieldprotocol.com/#/pool). Read our [Quick Start Guide](https://medium.com/yield-protocol/yield-protocol-v2-quickstart-guide-e516a955a405) for instructions. 
 
 Yield Protocol v2 has an improved the experience for providing liquidity. Users now contribute liquidity to strategies that support one Yield liquidity pool at a time. Pooling your liquidity earns you fees from borrowers and lenders. When the liquidity pool’s maturity date is reached, strategies automatically rollover liquidity from one pool to a later pool and require no user intervention.
 

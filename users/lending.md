@@ -1,6 +1,6 @@
 # Lending
 
-To lend, you first access the "Lend" tab in the [Yield v2 App](https://app.yieldprotocol.com/#/lend). Read our [Quick Start Guide NEED LINK]() for instructions. 
+To lend, you first access the "Lend" tab in the [Yield v2 App](https://app.yieldprotocol.com/#/lend). Read our [Quick Start Guide](https://medium.com/yield-protocol/yield-protocol-v2-quickstart-guide-e516a955a405) for instructions. 
 
 When you lend in Yield, you are buying future cash payments at a discount. These future cash payments are represented by tokens that we call “fyTokens”. A fyToken is a token that can be redeemed one-for-one for a base asset on some future date. FyTokens don’t pay interest themselves, rather the interest is determined by the difference between the face value of the token and the price you pay for it. 
 
