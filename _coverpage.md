@@ -1,6 +1,6 @@
 <!-- _coverpage.md -->
 
-# Yield <small>2</small>
+# Yield Protocol <small>2</small>
 
 > Fixed Yield Borrowing & Lending Protocol
 
