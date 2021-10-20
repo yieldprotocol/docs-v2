@@ -4,7 +4,7 @@ The Yield Protocol is divided into two repositories, one for the collateralized 
 
 At the core of Yield are user-owned **Vaults** representing a collateralized debt position. Each vault is associated with single collateral and debt in a single series. A series represents a single borrowable asset with a defined maturity date. For example, Alice may own a vault with ETH collateral and debt in the USDC0925 series. The  USDC0925 series represents an obligation to repay USDC on September 25th, 2021.
 
-At the core of Yield Protocol is the **Cauldron**, a smart contract that records the collateral and debt for users. Collateral and debt are kept in vaults that may be owned by a particular address. Cauldron permits management of the full lifecycle of a vault, from creating a vault, adding and removing collateral, adding and removing debt, checking collateralization, permitting liquidation of undercollateralized vaults, and rolling collateral and debt to a new series.
+Vaults are managed by the **Cauldron**, a smart contract that records the collateral and debt for each vault. The Cauldron permits management of the full lifecycle of a vault, from creating a vault, adding and removing collateral, adding and removing debt, checking collateralization, permitting liquidation of undercollateralized vaults, and rolling collateral and debt to a new series.
 
 Debt in Yield is tokenized in the form of fyTokens (“fixed yield tokens”). fyTokens are Ethereum based ERC-20 tokens that can be redeemed for an underlying asset one-to-one after a predetermined maturity date. For example, fyUSDC0925 tokens are redeemable for USDC after September 25th, 2021. Each fyToken maturity has an associated **FyToken** ERC-20 smart contract.
 

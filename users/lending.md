@@ -1,17 +1,10 @@
 # Lending
 
-To lend, you first access the "Lend" tab in the [Yield v2 App](https://app.yieldprotocol.com/#/lend).
+To lend, you first access the "Lend" tab in the [Yield v2 App](https://app.yieldprotocol.com/#/lend). Read our [Quick Start Guide](https://medium.com/yield-protocol/yield-protocol-v2-quickstart-guide-e516a955a405) for instructions. 
 
 When you lend in Yield, you are buying future cash payments at a discount. These future cash payments are represented by tokens that we call “fyTokens”. A fyToken is a token that can be redeemed one-for-one for a base asset on some future date. FyTokens don’t pay interest themselves, rather the interest is determined by the difference between the face value of the token and the price you pay for it. 
 
 The fixed interest rate you receive when lending is determined by a built-in automated market, and the more you lend, the lower your interest rate may be. 
-
-## Quick Start
-
-Lending on the Yield Protocol is a very simple process. You choose an asset you want to lend and you review and initiate the transaction. The first step is selecting the base asset that you want to lend. You can lend assets such as Dai, USDC, and USDT. Once you’ve selected the asset, you can indicate the amount of the asset you wish to lend. 
-
-Once you’ve entered an amount, you may select the series you wish to lend. Each series has a different maturity date. Yield currently provides quarterly maturity dates. Something to take into consideration: when selecting a series, you want to select a date that corresponds closely to the time you think you want to close the loan.
-
 
 
 ## Lending Under the Hood

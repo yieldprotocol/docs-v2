@@ -42,7 +42,7 @@ For a protocol deployment, these are the parameters that need to be defined.
 ## Mocks
 
 
-Often, the operations will involve the addresses of external contracts. These won’t be needed on mainnet.
+Often, the operations will involve the addresses of external contracts. On testnet, we use mocks to substitute for external contracts. These won’t be needed on mainnet.
 
 
 ### Assets and Oracle Sources
