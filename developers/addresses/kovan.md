@@ -27,7 +27,7 @@
 | Oracles    | UniswapV3Oracle       | 0x60b39f131bB8b824e3B0F111f93D20f0e5567EA4 |
 | Factories  | JoinFactory           | 0x2DdAB027254452763D2301024fE1058f9410532c |
 | Factories  | FYTokenFactory        | 0x21BF7B997aB272eeeBCF7086F09e6A069C3B8a38 |
-| Factories  | PoolFactory           | 0xc7422b7c8aFb8380a01657e826f5dab3BD6e7d0b |
+| Factories  | PoolFactory           | 0xA37e1866CAD311B19f76a8C39370b1c4e849567e |
 | Protocol   | Cauldron              | 0x00c961A3ca76F560AdcbE157b337925DA5D3AE26 |
 | Protocol   | Ladle                 | 0xeD5D1c6A66EE2c39bac78EE896ef66f5A85d6e68 |
 | Protocol   | Router                | 0xE6758E6872b090Ed187CE7AFFC245006a2887bBB |
