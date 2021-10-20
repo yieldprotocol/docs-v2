@@ -215,7 +215,7 @@ ladle.addIntegration(pool, false)
 ## Strategies
 
 
-In a case of a Strategy malfunction, it can be removed from the Ladle. However, this will not be completely effective in protecting user assets, as the Strategy functions can be executed directly, **TODO: Bundle a `paused` variable with `pool`, and check for it in `poolSelected` and `poolNotSelected`. Then it would be possible give fyToken to users in exchange for their strategy tokens, and wait for maturity until `endPool` can be called, and they can be redeemed.**
+In a case of a Strategy malfunction, it can be removed from the Ladle. However, this will not be completely effective in protecting user assets, as the Strategy functions can be executed directly.
 
 
 ```

@@ -1,50 +1,15 @@
 # Smart Contracts Overview
 
 
-![alt_text](images/image1.png "image_tooltip")
+<figure class="image" align = "center">
+  <img src="assets/architecture.png" width="1200" alt="Yield v2 smart contract architecture" title="Yield v2 smart contract architecture">
+</figure>
 
-
-
-# Utility Contracts
-
-Yield-utils-v2 repository.
-
-
-## AccessControl
-
-The access control contract was adapted from OpenZeppelin's AccessControl.sol and is inherited from most other contracts in the Yield Protocol.
-
-A role exists implicitly for each function in a contract, with the ROOT role as the admin for the role.
-
-If the `auth` modifier is present in a function, access must have been granted to the caller by an account with the admin role for the function role. This admin role will usually be ROOT, but that can be changed.
-
-An `admin` modifier exists to restrict functions to accounts bearing the `admin` role of a given other role. This is not used outside AccessControl.sol.
-
-An account belonging to the admin role for a function can grant and revoke memberships to the function role.
-
-The ROOT role is special in that it is its own admin so that any member of ROOT can grant and revoke ROOT permissions on other accounts.
-
-There is a special LOCK role, that is also an admin of itself, but has no members. By changing the admin role of a function role to LOCK, no further changes can ever be done to the function role membership, except users voluntarily renouncing to the function role.
-
-
-## ERC20 and ERC20Permit
-
-The Yield Protocol uses its own implementation of ERC20 contracts, which borrow heavily from the DS-Token implementation. The ERC2162 extension is taken from WETH10, which was taken in turn from Yield v1.
-
-
-## Timelock
-
-The Yield Protocol uses its own implementation of a Timelock, derived from Compound’s original contract, but inheriting from AccessControl and implementing a different pattern to set the earliest time that an execution can be done.
-
-
-## EmergencyBrake
-
-The EmergencyBrake stores the instructions to remove the orchestration between contracts, which is intended to be used in emergency situations to easily isolate parts of the protocol.
 
 
 # Vault Contracts
 
-Vault-v2 repository.
+The vault-v2 repository contains the contracts that enable Yield v2 as a Collateralized Debt Platform. Together, these contracts allow users to post collateral and borrow fyToken, while the protocol takes care of topics such as accounting, collateralization, redemption and liquidations.
 
 
 ## Oracle
@@ -217,156 +182,64 @@ After the debt is settled, the Witch returns the vault to its original owner.
 
 The Ladle is a routing and asset management contract for Yield. It can be upgraded through Modules or replaced entirely. It has considerable privileges and is the most complex contract in the protocol.
 
-
-### Cauldron
-
 The Ladle is authorized to make changes to the accounting in Cauldron. It is as well the only contract that is authorized to create, modify or destroy Vaults in the Cauldron.
-
-
-### Joins
 
 The Ladle keeps a registry of all Joins and it is authorized to move assets from any Join to any account. The Ladle also moves assets from users to Joins, with allowances approved by the users.
 
-
-### FyToken
-
 The Ladle is authorized to mint fyToken at will. The Ladle also moves fyToken from users to FYToken contracts for burning, with allowances approved by the users. The Ladle knows about all the existing fyTokens through the series registry in the Cauldron.
-
-
-### Pools
 
 The Ladle keeps a registry of all the Pools, indexed by the id of the series traded. The Ladle also moves assets from users to Pool contracts for trading, with allowances approved by the users.
 
 
-### Batch
+### Execution Flow
 
-Any number of actions can be batched in a single transaction using the Ladle. This is the most common method of operation.
+Any number of actions can be batched in a single transaction using the Ladle using `batch`. This is the most common method of operation.
 
+The Ladle can also be used to execute arbitrary calls on any registered contracts using `route`. This is used, for example, to deal with Pools and Strategies.
 
-### Route
+The Ladle can be extended by the use of modules. The Ladle can `moduleCall` functions in modules that have been authorized via governance. The Modules can inherit from LadleStorage to read and modify the Ladle storage, although modifying it is discouraged.
 
-The Ladle can be used to execute arbitrary calls on any registered contracts. This is used, for example, to deal with Pools and Strategies.
-
-
-### Modules
-
-The Ladle can be extended by the use of modules. The Ladle can `delegatecall` functions in modules that have been authorized via governance. The Modules can inherit from LadleStorage to read and modify the Ladle storage, although modifying it is discouraged.
-
-
-### Pour
+### User Features
 
 The Ladle uses the integrations and authorizations described above to provide collateralized debt features.
 
 When a user wants to deposit collateral and borrow a fyToken, the Ladle will `pour`:
 
+1. Take the collateral from the user to the appropriate Join.
+2. Register the position in the Cauldron.
+3. Mint the fyToken in the user’s account.
 
-
-1. 
-Take the collateral from the user to the appropriate Join.
-
-
-2. 
-Register the position in the Cauldron.
-
-
-3. 
-Mint the fyToken in the user’s account.
 Similarly, a user can repay debt and withdraw collateral with `pour`.
+1. Take the fyToken from the user, and burn it.
+2. Register the new position in the Cauldron.
+3. Transfer the collateral from the Join to the user.
 
-
-
-1. 
-Take the fyToken from the user, and burn it.
-
-
-2. 
-Register the new position in the Cauldron.
-
-
-3. 
-Transfer the collateral from the Join to the user.
-
-### Close
-
-Users can also pay their debt with the underlying asset for the debt, instead of with fyTokens. While the debt in fyToken terms only changes through borrowing actions, the debt in underlying terms changes according to the matching rate oracle. The Ladle will get the rate accrual from the oracle through the Cauldron, and adjust asset transfers, and record positions accordingly.
-
-
-### Stir
+Users can also pay their debt with the underlying asset for the debt, instead of with fyTokens, using `close`. While the debt in fyToken terms only changes through borrowing actions, the debt in underlying terms changes according to the matching rate oracle. The Ladle will get the rate accrual from the oracle through the Cauldron, and adjust asset transfers, and record positions accordingly.
 
 Users can move collateral and debt between Vaults through the Ladle using `stir`. Combined with the creation and destruction of Vaults, this can be used to split a Vault in two or to merge two Vaults into one.
 
 _Other Features_
-
-
-
-* 
-_Serve_: Borrow and trade the fyToken for underlying, effectively borrowing at a fixed rate.
-
-
-* 
-_Roll_: Migrate debt between two series.
-
-
-* 
-_Repay_: Trade underlying for fyToken, to pay the debt.
-
-
-* 
-_Repay Vault_: Trade underlying for fyToken, to pay exactly all the debt in a vault.
-
-
-* 
-_RepayFromLadle_: Use any existing fyToken in the Ladle to repay debt.
-
-
-* 
-_CloseFromLadle_: Use any existing base in the Ladle to repay debt.
-
-
-* 
-_Redeem_: Redeem fyToken in a fyToken contract for underlying.
-
-
-* 
-_Transfer_: Take tokens from the caller to a destination.
-
-
-* 
-_Permit management_: Execute a Dai or ERC2162 off-chain permit.
-
-
-* 
-_Ether management_: Convert to WETH, or from WETH.
+* _Serve_: Borrow and trade the fyToken for underlying, effectively borrowing at a fixed rate.
+* _Roll_: Migrate debt between two series.
+* _Repay_: Trade underlying for fyToken, to pay the debt.
+* _Repay Vault_: Trade underlying for fyToken, to pay exactly all the debt in a vault.
+* _RepayFromLadle_: Use any existing fyToken in the Ladle to repay debt.
+* _CloseFromLadle_: Use any existing base in the Ladle to repay debt.
+* _Redeem_: Redeem fyToken in a fyToken contract for underlying.
+* _Transfer_: Take tokens from the caller to a destination.
+* _Permit management_: Execute a Dai or ERC2162 off-chain permit.
+* _Ether management_: Convert to WETH, or from WETH.
 
 ## Wand
 
 Bundling of discrete governance actions into useful governance features.
 
-
-### Add asset
-
-Adding an asset involves registering it in the Cauldron, deploying a Join for it, registering the Join in the Ladle, and permissioning the Ladle to use the Join.
-
-
-### Make base
-
-Making a base out of an existing asset involves setting an oracle for its borrowing rate in the Cauldron, and allowing the Witch to put base into its join during liquidations.
-
-
-### Make ilk
-
-Making an ilk out of an existing asset, for a given base, involves setting a spot oracle for the base/ilk pair in the Cauldron, setting debt limits in the Cauldron, and allowing the Witch to take such ilk out of its Join during liquidations.
-
-
-### Add series
-
-Adding a series is a costly process in terms of gas. It involves deploying the related fyToken, registering it in the Cauldron, and approving a number of ilks to be used as collateral when borrowing it. The fyToken also need to be given access to the Join for its underlying.
-
-The Ladle must be given permission to mint and burn the fyToken. A Pool to trade between the fyToken and its underlying must be deployed, and registered in the Ladle.
-
+*Add asset*: Adding an asset involves registering it in the Cauldron, deploying a Join for it, registering the Join in the Ladle, and permissioning the Ladle to use the Join.
+*Make base*: Making a base out of an existing asset involves setting an oracle for its borrowing rate in the Cauldron, and allowing the Witch to put base into its join during liquidations.
+*Make ilk*: Making an ilk out of an existing asset, for a given base, involves setting a spot oracle for the base/ilk pair in the Cauldron, setting debt limits in the Cauldron, and allowing the Witch to take such ilk out of its Join during liquidations.
+*Add series*: Adding a series is a costly process in terms of gas. It involves deploying the related fyToken, registering it in the Cauldron, and approving a number of ilks to be used as collateral when borrowing it. The fyToken also need to be given access to the Join for its underlying. The Ladle must be given permission to mint and burn the added fyToken. A Pool to trade between the fyToken and its underlying must be deployed, and registered in the Ladle.
 
 # YieldSpace
-
 
 YieldSpace is an automated liquidity provider that is designed to enable efficient trading between fyTokens and their underlying assets. You can read more about it in our [YieldSpace Whitepaper](https://yield.is/YieldSpace.pdf) to get a deeper understanding of the calculations and the overall mechanism. The Yield App integrates YieldSpace seamlessly into the user experience.
 
@@ -440,3 +313,38 @@ A governance action sets the next pool to roll to. This action should be taken b
 A permissioned `startPool` function can be called if the Strategy is not currently investing in any pool, to invest in the next pool set by `setNextPool`.
 
 After the current pool matures, anyone can call `endPool` to convert all the Strategy holdings into underlying.
+
+# Utility Contracts
+
+The Yield v2 protocol doesn't directly reuse any other smart contract implementations. Any general use smart contracts needed were reimplemented and stored in the yield-utils-v2 repository.
+
+## AccessControl
+
+The access control contract was adapted from OpenZeppelin's AccessControl.sol and is inherited from most other contracts in the Yield Protocol.
+
+A role exists implicitly for each function in a contract, with the ROOT role as the admin for the role.
+
+If the `auth` modifier is present in a function, access must have been granted to the caller by an account with the admin role for the function role. This admin role will usually be ROOT, but that can be changed.
+
+An `admin` modifier exists to restrict functions to accounts bearing the `admin` role of a given other role. This is not used outside AccessControl.sol.
+
+An account belonging to the admin role for a function can grant and revoke memberships to the function role.
+
+The ROOT role is special in that it is its own admin so that any member of ROOT can grant and revoke ROOT permissions on other accounts.
+
+There is a special LOCK role, that is also an admin of itself, but has no members. By changing the admin role of a function role to LOCK, no further changes can ever be done to the function role membership, except users voluntarily renouncing to the function role.
+
+
+## ERC20 and ERC20Permit
+
+The Yield Protocol ERC20 contracts borrow heavily from the DS-Token implementation. The ERC2162 extension is taken from WETH10, which was taken in turn from Yield v1.
+
+
+## Timelock
+
+The Yield Protocol uses its own implementation of a Timelock, derived from Compound’s original contract, but inheriting from AccessControl and implementing a different pattern to set the earliest time that an execution can be done.
+
+
+## EmergencyBrake
+
+The EmergencyBrake stores the instructions to remove the orchestration between contracts, which is intended to be used in emergency situations to easily isolate parts of the protocol.
