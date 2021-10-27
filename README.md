@@ -59,12 +59,12 @@ Yield Protocol does not currently have a governance token. Currently, most of th
 You can check out our open roles here on our [careers](https://yield.is/careers) page.
 
 ## Useful Links
-> [Yield Dapp](https://app.yield.is/)<br>
-> [Yield Docs](https://docs.yield.is/)<br>
+> [Yield Dapp](https://app.yieldprotocol.com/)<br>
+> [Yield Docs](https://docs.yieldprotocol.com/)<br>
 > [Yield Whitepaper](https://yield.is/yield.pdf)<br>
 > [YieldSpace AMM Whitepaper](https://yield.is/yieldspace.pdf)<br>
 > [Github](https://github.com/yieldprotocol)<br>
-> [Discord Sever](https://discord.com/channels/752978124614008945)<br>
+> [Discord Sever](discord.gg/JAFfDj5)<br>
 > [Twitter](https://twitter.com/yield)<br>
 > [Medium](https://medium.com/yield-protocol)<br>
 
