@@ -40,7 +40,7 @@ Now that you know how zero coupon bonds work, dive into the [Users](users/) sect
 
 
 ## Audit
-Yield Protocol was audited by [Code 423n4](https://code423n4.com) and Trail of Bits. You may find the report Code 423n4 [here](https://code423n4.com/reports/2021-08-yield/), and the Trail of Bits report [here](https://github.com/trailofbits/publications/blob/master/reviews/YieldV2.pdf).
+Yield Protocol was audited by [Code 423n4](https://code423n4.com) and Trail of Bits. You may find the Code 423n4 reports [here](https://code423n4.com/reports/2021-05-yield/) and [here](https://code423n4.com/reports/2021-08-yield/), and the Trail of Bits report [here](https://github.com/trailofbits/publications/blob/master/reviews/YieldV2.pdf).
 
 ## Community
 Users and the development team are usually in the [Discord server](http://discord.gg/JAFfDj5).
