@@ -40,10 +40,10 @@ Now that you know how zero coupon bonds work, dive into the [Users](users/) sect
 
 
 ## Audit
-Yield Protocol was audited by [Code 423n4](https://code423n4.com) and Trail of Bits. You may find the report Code 423n4 [here](https://code423n4.com/reports/2021-08-yield/), and the Trail of Bits report [here]().
+Yield Protocol was audited by [Code 423n4](https://code423n4.com) and Trail of Bits. You may find the report Code 423n4 [here](https://code423n4.com/reports/2021-08-yield/), and the Trail of Bits report [here](https://github.com/trailofbits/publications/blob/master/reviews/YieldV2.pdf).
 
 ## Community
-Users and the development team are usually in the [Discord server](https://discord.com/channels/752978124614008945).
+Users and the development team are usually in the [Discord server](http://discord.gg/JAFfDj5).
 
 ## Bug Bounty
 We are offering bounties for bugs disclosed to us at [immunefi.com](https://immunefi.com/bounty/yieldprotocol). The bounty reward is up to $250,000, depending on severity. Please include full details of the vulnerability and steps/code to reproduce. We ask that you permit us time to review and remediate any findings before public disclosure.
@@ -59,12 +59,12 @@ Yield Protocol does not currently have a governance token. Currently, most of th
 You can check out our open roles here on our [careers](https://yield.is/careers) page.
 
 ## Useful Links
-> [Yield Dapp](https://app.yield.is/)<br>
-> [Yield Docs](https://docs.yield.is/)<br>
+> [Yield Dapp](https://app.yieldprotocol.com/)<br>
+> [Yield Docs](https://docs.yieldprotocol.com/)<br>
 > [Yield Whitepaper](https://yield.is/yield.pdf)<br>
 > [YieldSpace AMM Whitepaper](https://yield.is/yieldspace.pdf)<br>
 > [Github](https://github.com/yieldprotocol)<br>
-> [Discord Sever](https://discord.com/channels/752978124614008945)<br>
+> [Discord Sever](discord.gg/JAFfDj5)<br>
 > [Twitter](https://twitter.com/yield)<br>
 > [Medium](https://medium.com/yield-protocol)<br>
 
