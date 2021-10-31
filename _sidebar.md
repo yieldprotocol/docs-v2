@@ -15,6 +15,7 @@
     - [Emergencies](/developers/emergencies.md "Yield Protocol Docs | Emergencies")
     - [Technical Reference](developers/technical_reference/)
 - [Operations](/operations/ "Yield Protocol Docs | Operations")
+    - [Code Review Procedures](/operations/code_reviews.md "Yield Protocol Docs | Code Review Procedures")
     - [Deployment](/operations/deployment.md "Yield Protocol Docs | Deployment")
     - [Emergency Procedure](/operations/emergency_procedure.md "Yield Protocol Docs | Emergency Procedure")
     - [Emergency Plans](/operations/emergency_plans.md "Yield Protocol Docs | Emergency Plans")
