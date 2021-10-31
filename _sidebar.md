@@ -5,6 +5,7 @@
     - [Borrowing](/users/borrowing.md "Yield Protocol Docs | Users Borrowing")
     - [Lending](/users/lending.md "Yield Protocol Docs | Users Lending")
     - [Liquidity](/users/liquidity.md "Yield Protocol Docs | Users Liquidity")
+    - [Gas Costs](/users/gas_costs.md "Yield Protocol Docs | Gas Costs")
     <!-- - [Governance](users/governance.md "Yield Protocol Docs | Users Governance") -->
 - [Developers](/developers/ "Yield Protocol Docs | Developers")
     - [Addresses](/developers/addresses/ "Yield Protocol Docs | Addresses")
