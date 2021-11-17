@@ -34,6 +34,7 @@
 | Join       | DAIJoin              | 0x4fE92119CDf873Cf8826F4E6EcfD4E578E3D44Dc |
 | Join       | USDCJoin             | 0x0d9A1A773be5a83eEbda23bf98efB8585C3ae4f4 |
 | Join       | WBTCJoin             | 0x00De0AEFcd3069d88f85b4F18b144222eaAb92Af |
+| Join       | WstETHJoin           | 0x5364d336c2d2391717bD366b29B6F351842D7F82 |
 |            |                      |                                            |
 | Series     | FYDAI04              | 0x0119451f94E98716c3fa17ff31d19C98d134DD6d |
 | Pool       | FYDAI04LP            | 0x3771C99c087a81dF4633b50D8B149aFaA83E3c9E |
