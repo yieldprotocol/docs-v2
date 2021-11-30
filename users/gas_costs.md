@@ -1,7 +1,7 @@
 # Gas costs
 Yield v2 has been built aiming to achieve a minimal gas cost. For reference, these are the gas costs of some common operations.
 
-| Operation                   | Gas Cost | ETH cost at 100 GWei | USD cost at 100 GWei and $4000 USD/ETH | 
+| Operation                   | Gas Cost | ETH cost at 100 GWei | USD cost at 100 GWei and \$4000 USD/ETH | 
 |-----------------------------|------|------------|---------|
 | build, post and borrow      | 326K | 0.0326 ETH | $130.40 |
 | repay and remove collateral | 305K | 0.0305 ETH | $122.00 |
