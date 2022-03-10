@@ -38,12 +38,12 @@ Yield does not have a governance token yet. You will not find us on Uniswap and 
 
 ### Does the Yield Protocol have protocol fees?
 
-At the moment, no. 
+At the moment, no.
 
 To ensure that the Yield Protocol has a path towards revenue for future development, v2 includes the ability to charge borrowers origination fees. At launch, these fees will be disabled. The decision to turn on the fees and at what levels are reserved for a future determination by the community.
 
 ### When Layer2?
-Currently we have no plans to move on to Layer 2 solutions. We plan to constantly evaluate how Yield Protocol can find usage on a variety of different platforms. 
+We are currently live on Arbitrum!  Visit us at [app.yieldprotocol.com](https://app.yieldprotocol.com/) to get started.  We will continue to evaluate other L2's in the future.  If you'd like us to implement another L2, let us know on [Discord](https://discord.com/channels/752978124614008945)!
 
 ### When was Yield launched?
 Yield was incubated at [Paradigm](https://www.paradigm.xyz) and the first version went live on 19 Oct 2020.
@@ -55,7 +55,7 @@ From borrowers. Determined by the market supply and demand. -->
 
 ### How to borrow?
 
-Visit us at [app.yield.is](http://app.yield.is) to get started. You will need an Ethereum wallet(like [Metamask](https://metamask.io)), some ETH to pay for transaction fees and the base asset you would like to use as collateral. Once you have these things, you can choose the series from the app according to your needs and start the borrowing process.
+Visit us at [app.yieldprotocol.com](https://app.yieldprotocol.com/) to get started. You will need an Ethereum wallet(like [Metamask](https://metamask.io)), some ETH to pay for transaction fees and the base asset you would like to use as collateral. Once you have these things, you can choose the series from the app according to your needs and start the borrowing process.
 
 ### How much collateral is required for borrowing?
 
