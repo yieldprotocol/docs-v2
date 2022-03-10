@@ -20,7 +20,7 @@ To achieve its goals, Yield uses a class of tokens called *fyTokens* (fixed yie
 
 fyTokens do not pay interest but instead trade at a discount to their redemption value (like a [zero-coupon bond](https://www.investopedia.com/terms/z/zero-couponbond.asp)), rendering a profit at maturity when it is redeemed for its full face value. The interest rate may be calculated from the difference between the discounted value and the underlying asset's value at maturity.
 
-You can learn more about fyTokens by reading the original [Yield Protocol whitepaper](https://yield.is/Yield.pdf).
+You can learn more about fyTokens by reading the original [Yield Protocol whitepaper](https://yieldprotocol.com/Yield.pdf).
 
 ### An Example
 
