@@ -20,7 +20,7 @@ Yield does not currently have a token, nor are there plans to release one. As a 
 
 fyTokens are building blocks of Yield Protocol and they essentially represent tokenized loans.
 
-More concretely, fyTokens are Ethereum based ERC20 tokens that can be redeemed for an underlying asset one-to-one after a predetermined maturity date. fyTokens are analogous to zero-coupon bonds in the sense that they do not pay interest but instead trades at a discount, rendering a profit at maturity when it is redeemed for its full face value. The interest rate is calculated by the difference between the discounted value and the underlying asset's value at maturity. For example, if you have one fyDai token, you can redeem it for one Dai after the maturity date.
+More concretely, fyTokens are Ethereum based ERC20 tokens that can be redeemed for an underlying asset one-to-one after a predetermined maturity date. fyTokens are analogous to zero-coupon bonds in the sense that they do not pay interest but instead trade at a discount, rendering a profit at maturity when they are redeemed for their full face value. The interest rate is calculated by the difference between the discounted value and the underlying asset's value at maturity. For example, if you have one fyDai token, you can redeem it for one Dai after the maturity date.
 
 ### What assets can be borrowed or lent?
 
@@ -44,7 +44,7 @@ To ensure that the Yield Protocol has a path towards revenue for future developm
 
 ### When Layer2?
 
-We are currently live on Arbitrum! Visit us at [app.yieldprotocol.com](https://app.yieldprotocol.com/) to get started. We will continue to evaluate other L2's in the future. If you'd like us to implement another L2, let us know on [Discord](https://discord.com/channels/752978124614008945/897303879400689664)!
+We are currently live on Arbitrum! Visit us at [app.yieldprotocol.com](https://app.yieldprotocol.com/) to get started. We will continue to evaluate other L2's in the future. If you'd like us to deploy to another L2, let us know on [Discord](https://discord.com/channels/752978124614008945/897303879400689664)!
 
 ### When was Yield launched?
 
