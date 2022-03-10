@@ -64,7 +64,7 @@ You can check out our open roles here on our [careers](https://yieldprotocol.com
 
 ## Useful Links
 
-> [Yield Dapp](https://app.yieldprotocol.com/)<br> > [Yield Docs](https://docs.yieldprotocol.com/)<br> > [Yield Whitepaper](https://yield.is/yield.pdf)<br> > [YieldSpace AMM Whitepaper](https://yield.is/yieldspace.pdf)<br> > [Github](https://github.com/yieldprotocol)<br> > [Discord Sever](discord.gg/JAFfDj5)<br> > [Twitter](https://twitter.com/yield)<br> > [Medium](https://medium.com/yield-protocol)<br>
+> [Yield Dapp](https://app.yieldprotocol.com/)<br> > [Yield Docs](https://docs.yieldprotocol.com/)<br> > [Yield Whitepaper](https://yieldprotocol.com/Yield.pdf)<br> > [YieldSpace AMM Whitepaper](https://yieldprotocol.com/YieldSpace.pdf)<br> > [Github](https://github.com/yieldprotocol)<br> > [Discord Sever](discord.gg/JAFfDj5)<br> > [Twitter](https://twitter.com/yield)<br> > [Medium](https://medium.com/yield-protocol)<br>
 
 ## Info on these Docs
 
