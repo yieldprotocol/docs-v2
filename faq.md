@@ -10,7 +10,7 @@ The goal of the Yield Protocol is to make fixed-rate borrowing and lending a fun
 
 ### What differentiates Yield Protocol from other lending protocols?
 
-Yield pioneered fixed-rate, fixed-term borrowing and lending. In our [whitepaper](https://yield.is/Yield.pdf), we were the first to show how fixed-rate, fixed-term borrowing and lending can be achieved by tokenizing loans that are analogous to zero-coupon bonds. We were also the first to create an automated market maker for tokenized loans in our [YieldSpace paper](https://yield.is/YieldSpace.pdf).
+Yield pioneered fixed-rate, fixed-term borrowing and lending. In our [whitepaper](https://yieldprotocol.com/Yield.pdf), we were the first to show how fixed-rate, fixed-term borrowing and lending can be achieved by tokenizing loans that are analogous to zero-coupon bonds. We were also the first to create an automated market maker for tokenized loans in our [YieldSpace paper](https://yieldprotocol.com/YieldSpace.pdf).
 
 ### Wen Token?
 
@@ -201,7 +201,7 @@ Yes!
 
 ### What is YieldSpace?
 
-To improve the liquidity of fyTokens, Yield has designed an automated liquidity provider that is designed to enable efficient trading between fyTokens and their underlying assets. We call this new automated liquidity provider YieldSpace. You can read more about it in our [YieldSpace Whitepaper](https://yield.is/YieldSpace.pdf) to get a deeper understanding of the calculations and the overall mechanism. The Yield App integrates YieldSpace seamlessly into the user experience.
+To improve the liquidity of fyTokens, Yield has designed an automated liquidity provider that is designed to enable efficient trading between fyTokens and their underlying assets. We call this new automated liquidity provider YieldSpace. You can read more about it in our [YieldSpace Whitepaper](https://yieldprotocol.com/YieldSpace.pdf) to get a deeper understanding of the calculations and the overall mechanism. The Yield App integrates YieldSpace seamlessly into the user experience.
 
 ### What is a Flash Loan?
 
