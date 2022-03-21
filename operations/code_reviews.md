@@ -41,6 +41,8 @@ Opinionated **security**, **code quality** standards, and **code review policies
     - [Functions](https://github.com/Rari-Capital/solcurity#functions)
     - [External Calls](https://github.com/Rari-Capital/solcurity#external-calls)
     - [Static Calls](https://github.com/Rari-Capital/solcurity#static-calls)
+- Consider these additional Yield security precautions:
+    - Never ever allow users to call arbitrary contracts from our contracts. Either use auth or some kind of whitelist.
 - After reviewing the code changes, see the [Code](https://github.com/Rari-Capital/solcurity#events), [Contract](https://github.com/Rari-Capital/solcurity#events), and [DeFi](https://github.com/Rari-Capital/solcurity#events) checklists
 - Before reviewing tests, construct a mental model of how you would approach testing:
     - Are **realistic** scenarios/values used in tests?
