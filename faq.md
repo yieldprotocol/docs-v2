@@ -57,7 +57,7 @@ From borrowers. Determined by the market supply and demand. -->
 
 ### How to borrow?
 
-Visit us at [app.yieldprotocol.com](https://app.yieldprotocol.com/) to get started. You will need an Ethereum wallet(like [Metamask](https://metamask.io)), some ETH to pay for transaction fees and the base asset you would like to use as collateral. Once you have these things, you can choose the series from the app according to your needs and start the borrowing process.
+Visit us at [app.yieldprotocol.com](https://app.yieldprotocol.com/) to get started. You will need an Ethereum wallet (like [Metamask](https://metamask.io)), some ETH to pay for transaction fees and the base asset you would like to use as collateral. Once you have these things, you can choose the series from the app according to your needs and start the borrowing process.
 
 ### How much collateral is required for borrowing?
 
