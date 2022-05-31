@@ -1,11 +1,5 @@
 # Troubleshooting
 
-If you can't solve your issue with the instructions here, please open a support ticket in our Discord [#create-ticket](https://discord.com/channels/752978124614008945/893209711397195776) channel. We can't provide support on public channels for security reasons.
- - Tell us what is that you were trying to achieve.
- - Tell us how did you arrive to the issue.
- - Tell us your address.
- - If there is any debugging information (a long string of non-sensical hexadecimal data), please copy and paste that in the ticket.
- - Please be aware that certain levels of support are only available during European or American business hours.
 
 ## General
 
@@ -55,3 +49,12 @@ If you have been liquidated, we need to verify that you own the liquidated vault
  - Connect with the wallet that owns the liquidated vault
  - Sign a message with any text in it
  - Post the result in a #create-ticket channel in Discord.
+
+ ## If Everything Else Fails
+
+ If you can't solve your issue with the instructions here, please open a support ticket in our Discord [#create-ticket](https://discord.com/channels/752978124614008945/893209711397195776) channel. We can't provide support on public channels for security reasons.
+ - Tell us what is that you were trying to achieve.
+ - Tell us how did you arrive to the issue.
+ - Tell us your address.
+ - If there is any debugging information (a long string of non-sensical hexadecimal data), please copy and paste that in the ticket.
+ - Please be aware that certain levels of support are only available during European or American business hours.
