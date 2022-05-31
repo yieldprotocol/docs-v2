@@ -1,4 +1,4 @@
-# How to verify a Timelock proposal
+# How to Manually Verify a Timelock Proposal
 
 Timelock proposals are identified by a 32-byte hash, such as: `6B1705CD4D1F0471C2BA7D67A30441D998CA4A5BC5F68E784B1538E883BA4AFA`
 
