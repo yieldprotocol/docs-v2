@@ -50,6 +50,10 @@ If you have been liquidated, we need to verify that you own the liquidated vault
  - Sign a message with any text in it
  - Post the result in a #create-ticket channel in Discord.
 
+## Maybe It's a Bug
+
+Please check in the [bug tracker](https://github.com/yieldprotocol/bugs/issues) if there is an issue matching what you've found. If there is, you can consider waiting, or [giving us a nudge](https://discord.com/channels/752978124614008945/764135581704781864) so that we prioritize it.
+
  ## If Everything Else Fails
 
  If you can't solve your issue with the instructions here, please open a support ticket in our Discord [#create-ticket](https://discord.com/channels/752978124614008945/893209711397195776) channel. We can't provide support on public channels for security reasons.
