@@ -41,3 +41,5 @@ In the EmergencyBrake, the **Timelock** has the permission to `plan` emergencies
 
 
 In the EmergencyBrake, the **operations team** has the permission to `execute` plans, effectively pausing parts of the protocol.
+
+[Edit this page](https://github.com/yieldprotocol/docs-v2/edit/main/developers/governance.md)

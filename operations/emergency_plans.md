@@ -21,3 +21,5 @@
 | fyToken | join(02)      | 0xb22960b37717835a0fed7c666e6af2f956d5d4e39c1e4a08cbc6986105626d9c |
 | ladle   | fyToken(0205) | 0x242423d1d59bce31941ca5ea020902913a7bae637424bf299e822aacbeaab235 |
 | fyToken | join(02)      | 0xd37ff9e3d065d11a938459ffdb030651177d546da21f0949cb16ccc7bb4c6908 |
+
+[Edit this page](https://github.com/yieldprotocol/docs-v2/edit/main/operations/emergency_plans.md)

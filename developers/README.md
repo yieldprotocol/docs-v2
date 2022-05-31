@@ -17,3 +17,5 @@ To ensure that vaults are properly collateralized, Yield has various **Oracle**
 If users fail to maintain the appropriate level of collateral, they may be liquidated via **Witch**, Yield’s liquidation engine. Witch permits anyone to kick off the liquidation process for an undercollateralized vault. Liquidation is performed via an increasing price auction that increases the amount of collateral the system is willing to pay to cover the debt.
 
 Yield includes an internal AMM to provide liquidity for fyTokens. The AMM is called YieldSpace. YieldSpace is implemented in the **Pool** contract. A **PoolRouter** contract manages calls to and from the pool. YieldSpace pools are designed to trade in interest rates space. That means that the pool will quote trades at the same marginal interest rate over time, absent any trading activity (that would change the interest rate).
+
+[Edit this page](https://github.com/yieldprotocol/docs-v2/edit/main/developers/README.md)

@@ -10,3 +10,5 @@ Yield v2 has been built aiming to achieve a minimal gas cost. For reference, the
 |                             |      |            |         |
 
 Please be aware that the Yield v2 transactions are built dynamically for each request, and gas costs might vary by a small amount for each specific situation.
+
+[Edit this page](https://github.com/yieldprotocol/docs-v2/edit/main/users/gas_costs.md)

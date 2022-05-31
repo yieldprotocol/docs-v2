@@ -56,3 +56,5 @@ Opinionated **security**, **code quality** standards, and **code review policies
 - Notify reviewers if any changes are made to obtain final approval
 - **Must have at least 1 approval prior to merge**
 - Merge PR and close related Github issue
+
+[Edit this page](https://github.com/yieldprotocol/docs-v2/edit/main/operations/code_reviews.md)

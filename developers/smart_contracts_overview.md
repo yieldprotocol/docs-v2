@@ -348,3 +348,5 @@ The Yield Protocol uses its own implementation of a Timelock, derived from Compo
 ## EmergencyBrake
 
 The EmergencyBrake stores the instructions to remove the orchestration between contracts, which is intended to be used in emergency situations to easily isolate parts of the protocol.
+
+[Edit this page](https://github.com/yieldprotocol/docs-v2/edit/main/developers/smart_contracts_overview.md)

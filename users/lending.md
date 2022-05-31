@@ -26,3 +26,5 @@ To compensate lenders who do not redeem fyTokens right away, after maturity they
 If you own fyDai after maturity, you will start to earn the Dai Savings Rate on your fyDai, until you decide to redeem it for Dai.
 
  ![](../assets/redemption.png)
+
+ [Edit this page](https://github.com/yieldprotocol/docs-v2/edit/main/users/lending.md)

@@ -15,3 +15,5 @@ All changes to the protocol are executed through the Timelock.
 1. The operations team will submit the proposal, which is a series of function calls to be executed from the Timelock, calling `propose` in the Timelock.
 2. The owners of the multisig, or the community in its case, can independently decode the proposal to verify its contents. If it is collectively decided to approve the proposal, the governor account will call `approve` on the Timelock for the proposal hash.
 3. The operations team will `execute` the approved proposal, no earlier than the delay set in the Timelock. The proposal will be executed from the Timelock.
+
+[Edit this page](https://github.com/yieldprotocol/docs-v2/edit/main/governance/governance.md)

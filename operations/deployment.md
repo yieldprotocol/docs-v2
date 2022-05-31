@@ -1021,3 +1021,6 @@ proposal.push(
 
 
 **Input**: governance.json, protocol.json, pools.json, strategies.json
+
+
+[Edit this page](https://github.com/yieldprotocol/docs-v2/edit/main/operations/deployment.md)

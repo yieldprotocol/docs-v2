@@ -221,3 +221,5 @@ In a case of a Strategy malfunction, it can be removed from the Ladle. However, 
 ```
 ladle.addToken(strategy, false)
 ladle.addIntegration(strategy, false)
+
+[Edit this page](https://github.com/yieldprotocol/docs-v2/edit/main/developers/emergencies.md)

@@ -184,3 +184,5 @@ Participants are encouraged to provide inputs on each of the steps. If a partici
    - Changes in the process and documentation
    - Changes in code and tests to validate
    - Changes in tools implemented and incorporated into the process
+
+[Edit this page](https://github.com/yieldprotocol/docs-v2/edit/main/operations/emergency_procedure.md)

@@ -57,3 +57,5 @@ If a borrower fails to do so, they may be liquidated: their collateral will be s
 <!-- For ETH collateral, fyDAI uses the same collateralization ratio as MakerDAO, which is currently 150%. -->
 
 <!-- TODO: Need to expand upon what ratio will be used for different collateral and different assets -->
+
+[Edit this page](https://github.com/yieldprotocol/docs-v2/edit/main/users/borrowing.md)

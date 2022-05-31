@@ -69,3 +69,5 @@ You can check out our open roles here on our [careers](https://yieldprotocol.com
 ## Info on these Docs
 
 You can run this documentation offline by using [Docsify](https://docsify.js.org/#/). Fork this repo, [install Docsify](https://docsify.js.org/#/quickstart) on your local machine, and then in the root folder of this repo, type `docsify serve`. The website will be served on port 3000 on your localhost: `localhost:3000`.
+
+[Edit this page](https://github.com/yieldprotocol/docs-v2/edit/main/README.md)

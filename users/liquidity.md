@@ -30,3 +30,5 @@ The x-axis is the amount of fyDai sold. The y-axis is the implicit interest rate
 
 ![](../assets/market_impact.png)<br>
 YieldSpace consistently outperforms Uniswap on both interest rates and market quotes</figcaption>
+
+[Edit this page](https://github.com/yieldprotocol/docs-v2/edit/main/users/liquidity.md)

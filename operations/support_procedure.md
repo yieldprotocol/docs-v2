@@ -18,5 +18,4 @@ The goal is to maximise the user satisfaction with the use of the Yield Protocol
 12. Regular updates on progress will be given to the user no more than 24h apart, with an expectation for the time of the next update.
 13. Upon resolution, the user will be informed of the status, and the knowledge base of know issues will be updated with the resolution or workaround.
 
-
-
+[Edit this page](https://github.com/yieldprotocol/docs-v2/edit/main/operations/support_procedure.md)

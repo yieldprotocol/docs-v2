@@ -58,3 +58,6 @@ If you have been liquidated, we need to verify that you own the liquidated vault
  - Tell us your address.
  - If there is any debugging information (a long string of non-sensical hexadecimal data), please copy and paste that in the ticket.
  - Please be aware that certain levels of support are only available during European or American business hours.
+
+
+[Edit this page](https://github.com/yieldprotocol/docs-v2/edit/main/troubleshooting.md)

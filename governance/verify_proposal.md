@@ -57,3 +57,5 @@ The Timelock is asking the ChainlinkMultiOracle to set a new source:
  - Data source: [0x986b5E1e1755e3C2440e960477f25201B0a8bbD4](https://etherscan.io/address/0x986b5E1e1755e3C2440e960477f25201B0a8bbD4)
 
 **Note:** Often, a proposal will be for grantRole, grantRoles, revokeRole, or revokeRoles. The role is a 4-byte parameter, such as `0xef532f2e`. We can enter this role in the [4byte database](https://www.4byte.directory/signatures/?bytes4_signature=0xef532f2e), and we will know which permission is being given (`setSources` in the example).
+
+[Edit this page](https://github.com/yieldprotocol/docs-v2/edit/main/governance/verify_proposal.md)
