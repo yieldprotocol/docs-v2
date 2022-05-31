@@ -1,8 +1,6 @@
 # Troubleshooting
 
-If you can't solve your issue with the instrutions here, please ask us in [Discord](https://discord.com/channels/752978124614008945).
-
- - Open a support ticket in [#create-ticket](https://discord.com/channels/752978124614008945/893209711397195776). We can't provide support on public channels for security reasons.
+If you can't solve your issue with the instructions here, please open a support ticket in our Discord [#create-ticket](https://discord.com/channels/752978124614008945/893209711397195776) channel. We can't provide support on public channels for security reasons.
  - Tell us what is that you were trying to achieve.
  - Tell us how did you arrive to the issue.
  - Tell us your address.
@@ -47,7 +45,6 @@ The minimum debt that can be allowed in a vault at the time of writing is 5000 U
 </figure>
 
  - Make sure that you have enough funds in your wallet to repay the entire debt.
-
 
 ## Liquidated
 
