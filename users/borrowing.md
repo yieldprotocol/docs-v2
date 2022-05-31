@@ -24,7 +24,7 @@ After maturity, if you don't close your borrowing position, floating-rate intere
 ### Example
 
 To borrow Dai, as a user you have to buy fyDai
-(for users of the Yield App, the buyer will in practice be [YieldSpace](developers?id=yieldspace-contracts), Yield's application specific automated market maker). Assuming ETH is \$400
+(for users of the Yield App, the buyer will in practice be [YieldSpace](developers/smart_contracts_overview?id=yieldspace), Yield's application specific automated market maker). Assuming ETH is \$400
 
 1. You deposit 0.5 ETH of collateral (worth $200) in the system. This allows you to borrow up to 132 fyDai from any of the available maturities. 
 1. You decide on Sept. 31, 2021 to borrow 100 fyDaiDec21 (fyDai expiring on December 31, 2021).
