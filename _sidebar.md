@@ -9,7 +9,6 @@
     <!-- - [Governance](users/governance.md "Yield Protocol Docs | Users Governance") -->
 - [Developers](/developers/ "Yield Protocol Docs | Developers")
     - [Addresses](/developers/addresses/ "Yield Protocol Docs | Addresses")
-        - [Mainnet](/developers/addresses/mainnet.md "Yield Protocol Docs | Mainnet")
     - [Smart Contract Overview](/developers/smart_contracts_overview.md "Yield Protocol Docs | Smart Contract Overview")
     - [Governance](/developers/governance.md "Yield Protocol Docs | Governance")
     - [Emergencies](/developers/emergencies.md "Yield Protocol Docs | Emergencies")
