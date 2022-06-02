@@ -1,6 +1,7 @@
 <!-- docs/_sidebar.md -->
 - [Getting Started](/ "Yield Protocol Documentation")
 - [Troubleshooting](troubleshooting.md "Yield Protocol Docs | Troubleshooting")
+- [Troubleshooting (疑难解答)](troubleshooting_cn.md "Yield Protocol Docs | Troubleshooting (疑难解答)")
 - [FAQ](faq.md "Yield Protocol Docs | FAQ")
 - [Users](/users/ "Yield Protocol Docs | Users Documentation")
     - [Borrowing](/users/borrowing.md "Yield Protocol Docs | Users Borrowing")
