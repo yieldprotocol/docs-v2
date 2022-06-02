@@ -1,4 +1,4 @@
-# Solidity API
+# Cauldron
 
 ## CauldronMath
 

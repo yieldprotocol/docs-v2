@@ -1,6 +1,4 @@
-# Solidity API
-
-## Router
+# Router
 
 _Router forwards calls between two contracts, so that any permissions
 given to the original caller are stripped from the call.

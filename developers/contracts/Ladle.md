@@ -1,6 +1,4 @@
-# Solidity API
-
-## Ladle
+# Ladle
 
 _Ladle orchestrates contract calls throughout the Yield Protocol v2 into useful and efficient user oriented features._
 

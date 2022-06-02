@@ -1,6 +1,4 @@
-# Solidity API
-
-## FYToken
+# FYToken
 
 ### Point
 

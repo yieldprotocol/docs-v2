@@ -1,6 +1,4 @@
-# Solidity API
-
-## Witch
+# Witch
 
 ### Point
 

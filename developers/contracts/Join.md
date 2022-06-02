@@ -1,6 +1,4 @@
-# Solidity API
-
-## Join
+# Join
 
 ### asset
 

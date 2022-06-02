@@ -1,6 +1,4 @@
-# Solidity API
-
-## FlashJoin
+# FlashJoin
 
 ### FlashFeeFactorSet
 
