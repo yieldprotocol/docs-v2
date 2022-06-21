@@ -50,6 +50,8 @@ Users and the development team are usually in the [Discord server](http://discor
 
 We are offering bounties for bugs disclosed to us at [immunefi.com](https://immunefi.com/bounty/yieldprotocol). The bounty reward is up to $250,000, depending on severity. Please include full details of the vulnerability and steps/code to reproduce. We ask that you permit us time to review and remediate any findings before public disclosure.
 
+Known bugs are listed in [this public repo](https://github.com/yieldprotocol/bugs/issues).
+
 ### Contributing
 
 If you have a contribution to make, please reach us out on Discord and we will consider it for a future release or product.
