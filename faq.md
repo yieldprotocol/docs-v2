@@ -210,3 +210,5 @@ A loan that requires no collateral from the borrower, but that needs to be repai
 ### How is Yield Governed?
 
 The founding team believes in decentralization and building towards community control of the protocol. Right now, we believe that is best served by building, and growing community involvement. Long term we expect Yield Protocol to be community-owned and community controlled through a process of progressive decentralization.
+
+[Edit this page](https://github.com/yieldprotocol/docs-v2/edit/main/faq.md)
