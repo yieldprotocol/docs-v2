@@ -2,7 +2,7 @@
 
 Yield Protocol brings fixed-rate borrowing and lending for fixed terms to decentralized finance.
 
-Today, most of the popular decentralized finance protocols are floating-rate. While floating-rate lending and borrowing is a powerful tool, it comes with significant drawbacks. These protocols may experience interest rate volatility that can make it difficult for you to plan for the future, make investment decisions, and properly hedge risk when borrowing and lending. Yield Protocol solves these challenge by introducing fixed-rate, fixed-term borrowing and lending.
+Today, most of the popular decentralized finance protocols are floating-rate. While floating-rate lending and borrowing is a powerful tool, it comes with significant drawbacks. These protocols may experience interest rate volatility that can make it difficult for you to plan for the future, make investment decisions, and properly hedge risk when borrowing and lending. Yield Protocol solves these challenges by introducing fixed-rate, fixed-term borrowing and lending.
 
 In this documentation, you can learn more about how the Yield Protocol works, how to get started, and how to learn more.
 
