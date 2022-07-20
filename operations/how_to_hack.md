@@ -1,4 +1,4 @@
-​# How to Hack the Yield Protocol
+# How to Hack the Yield Protocol
 
 This document lists ways in which the Yield Protocol could be hacked, if an error is made. This information will be relevant in hardening the platform and our processes.
 

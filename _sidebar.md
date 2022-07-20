@@ -17,7 +17,6 @@
     - [Technical Reference](developers/technical_reference/)
 - [Operations](/operations/ "Yield Protocol Docs | Operations")
     - [Code Review Procedures](/operations/code_reviews.md "Yield Protocol Docs | Code Review Procedures")
-    - [Deployment](/operations/deployment.md "Yield Protocol Docs | Deployment")
     - [How To Hack the Yield Protocol](/operations/how_to_hack.md "Yield Protocol Docs | How To Hack the Yield Protocol")
     - [Emergency Procedure](/operations/emergency_procedure.md "Yield Protocol Docs | Emergency Procedure")
     - [Emergency Plans](/operations/emergency_plans.md "Yield Protocol Docs | Emergency Plans")
