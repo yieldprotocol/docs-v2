@@ -23,7 +23,7 @@ To compensate lenders who do not redeem fyTokens right away, after maturity they
 
 #### Maturity
 
-If you own fyDai after maturity, you will start to earn the Dai Savings Rate on your fyDai, until you decide to redeem it for Dai.
+If you own fyDai after maturity, you may be paid interest after maturity. Currently, you will start to earn the Compound Dai Lending rate on your fyDai, until you decide to redeem it for Dai. Other fyTokens (such as fyFRAX) do not pay interest. 
 
  ![](../assets/redemption.png)
 
