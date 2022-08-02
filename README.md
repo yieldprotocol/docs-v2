@@ -62,7 +62,7 @@ Yield Protocol does not currently have a governance token. Currently, most of th
 
 ## We Are Hiring
 
-You can check out our open roles here on our [careers](https://yieldprotocol.com/careers) page.
+You can check out our open roles [here](https://yield-protocol.breezy.hr/).
 
 ## Useful Links
 
