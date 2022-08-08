@@ -38,9 +38,11 @@ $$ 0.95 = \frac{1}{(1 + r)^1} \leftrightarrow r = \frac{1}{0.95} - 1 = 0.0526 $$
 
 Now that you know how zero coupon bonds work, dive into the [Users](users/) section if you want to learn how to use Yield Protocol, or into the [Developers](developers/) if you are a developer looking to integrate with our smart contracts
 
-## Audit
+## Audits
 
-Yield Protocol was audited by [Code 423n4](https://code423n4.com) and Trail of Bits. You may find the Code 423n4 reports [here](https://code423n4.com/reports/2021-05-yield/) and [here](https://code423n4.com/reports/2021-08-yield/), and the Trail of Bits report [here](https://github.com/trailofbits/publications/blob/master/reviews/YieldV2.pdf).
+[Yieldspace TV](https://github.com/yieldprotocol/yieldspace-tv) was audited by [ABDK Consulting](https://www.abdk.consulting/), and the report can be found [here](https://github.com/yieldprotocol/yieldspace-tv/blob/main/audit/ABDK_Yield_yieldspace_tv_v_1_0.pdf).  
+Yield Protocol was also audited by [Code 423n4](https://code423n4.com) and [Trail of Bits](https://www.trailofbits.com/).
+You may find the Code 423n4 reports [here](https://code423n4.com/reports/2021-05-yield/) and [here](https://code423n4.com/reports/2021-08-yield/), and the Trail of Bits report [here](https://github.com/trailofbits/publications/blob/master/reviews/YieldV2.pdf).
 
 ## Community
 
