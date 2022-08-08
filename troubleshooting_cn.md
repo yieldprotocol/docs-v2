@@ -54,7 +54,7 @@
 
 ## Maybe It's a Bug（其他Bug）
 
-如果存在与您发现的问题相匹配的问题，请检查 [bug tracker](https://github.com/yieldprotocol/bugs/issues). 如果有，您可以考虑等待，或者尝试 [轻推我们](https://discord.com/channels/752978124614008945/764135581704781864) so that we prioritize it.
+如果存在与您发现的问题相匹配的问题，请检查 [bug tracker](https://github.com/yieldprotocol/bugs/issues). 如果有，您可以考虑等待，或者尝试 [轻推我们](https://discord.com/channels/752978124614008945/764135581704781864) 以便我们优先考虑它。
 
  ## If Everything Else Fails（如果一切都失败了）
 
