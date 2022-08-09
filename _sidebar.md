@@ -13,6 +13,7 @@
     - [Addresses](/developers/addresses.md "Yield Protocol Docs | Addresses")
     - [Smart Contract Overview](/developers/smart_contracts_overview.md "Yield Protocol Docs | Smart Contract Overview")
     - [Governance](/developers/governance.md "Yield Protocol Docs | Governance")
+    - [Liquidations](/developers/liquidations.md "Yield Protocol Docs | Liquidations")
     - [Emergencies](/developers/emergencies.md "Yield Protocol Docs | Emergencies")
     - [Technical Reference](developers/technical_reference/)
 - [Operations](/operations/ "Yield Protocol Docs | Operations")
