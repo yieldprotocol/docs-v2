@@ -9,7 +9,7 @@ Any vault that is undercollateralized in the Cauldron can be set up for an aucti
 
 There are exceptions to this rule.
 1. It is possible to set any given collateral/underlying pair as out of scope for the Witch. Some pairs should not be liquidated (such as DAI/fyDAI).
-2. It is possible to set any owner to be protected from liquidations. The goal for this is to be able to run parallel liquidation engines.
+2. It is possible to set any address to be protected from liquidations. The goal for this is to be able to run parallel liquidation engines.
 
 Governance can choose whether liquidations for any pair should be of the whole vault, or of only a part of the vault.
 
@@ -59,10 +59,9 @@ Any of these permissions will have a catastrophic impact if abused.
 ## Governance Errors or Attacks
 While governance actions will be carefully tested, it is in everyone's interest to disclose what's the worst that could happen.
  - `point`: Would disable liquidations as all payments fail.
- - `setLine`: Proportion being set to zero or at a very small number would disable liquidations. Setting a `line` for a non-existing pair might mean that the real pair is not set to be liquidable.
- - `setLimit`: Setting a `limit` for a non-existing pair might mean that the real pair is not set to be liquidable. Setting `max` to zero would only allow one concurrent auction. Setting `max` to 2^128-1 would allow any amount of colalteral to be auctioned concurrently.
- - `setAnotherWitch`: It can be misused to protect specific users from liquidation.
- - `setIgnoredPair`: It can be misused to disable liquidations for any pair.
+ - `setLineAndLimit`: Proportion being set to zero or at a very small number would disable liquidations. Setting a `line` for a non-existing pair might mean that the real pair is not set to be liquidable.
+ - `setLineAndLimit`: Setting a `limit` for a non-existing pair might mean that the real pair is not set to be liquidable. Setting `max` to zero would only allow one concurrent auction. Setting `max` to 2^128-1 would allow any amount of colalteral to be auctioned concurrently.
+ - `setProtected`: It can be misused to protect specific users from liquidation.
  - `setAuctioneerReward`: It can be misused to direct all profit for auctioneers, effectively disincentivizing liquidators to liquidate.
 
 ## Design Decisions
@@ -75,9 +74,6 @@ The Witch uses the same batch pattern as the rest of the Yield Protocol, and nev
 
 ### Point
 The `point` function is a standard function to change orchestration throughout the Yield Protocol. While it could be simplified for this contract, we prefer to keep it as is for consistency.
-
-### OtherWitches
-The name is a bit misleading, as any address can be entered. Better naming suggestions are welcome.
 
 ### Reentrancy
 We trust other contracts in the Yield Protocol, including tokens accepted as collateral or underlying, as safe against reentrancy. They are only added through governance.
