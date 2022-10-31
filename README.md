@@ -2,7 +2,7 @@
 
 Yield Protocol brings fixed-rate borrowing and lending for fixed terms to decentralized finance.
 
-Today, most of the popular decentralized finance protocols are floating-rate. While floating-rate lending and borrowing is a powerful tool, it comes with significant drawbacks. These protocols may experience interest rate volatility that can make it difficult for you to plan for the future, make investment decisions, and properly hedge risk when borrowing and lending. Yield Protocol solves these challenge by introducing fixed-rate, fixed-term borrowing and lending.
+Today, most of the popular decentralized finance protocols are floating-rate. While floating-rate lending and borrowing is a powerful tool, it comes with significant drawbacks. These protocols may experience interest rate volatility that can make it difficult for you to plan for the future, make investment decisions, and properly hedge risk when borrowing and lending. Yield Protocol solves these challenges by introducing fixed-rate, fixed-term borrowing and lending.
 
 In this documentation, you can learn more about how the Yield Protocol works, how to get started, and how to learn more.
 
@@ -38,9 +38,11 @@ $$ 0.95 = \frac{1}{(1 + r)^1} \leftrightarrow r = \frac{1}{0.95} - 1 = 0.0526 $$
 
 Now that you know how zero coupon bonds work, dive into the [Users](users/) section if you want to learn how to use Yield Protocol, or into the [Developers](developers/) if you are a developer looking to integrate with our smart contracts
 
-## Audit
+## Audits
 
-Yield Protocol was audited by [Code 423n4](https://code423n4.com) and Trail of Bits. You may find the Code 423n4 reports [here](https://code423n4.com/reports/2021-05-yield/) and [here](https://code423n4.com/reports/2021-08-yield/), and the Trail of Bits report [here](https://github.com/trailofbits/publications/blob/master/reviews/YieldV2.pdf).
+[Yieldspace TV](https://github.com/yieldprotocol/yieldspace-tv) was audited by [ABDK Consulting](https://www.abdk.consulting/), and the report can be found [here](https://github.com/yieldprotocol/yieldspace-tv/blob/main/audit/ABDK_Yield_yieldspace_tv_v_1_0.pdf).  
+Yield Protocol was also audited by [Code 423n4](https://code423n4.com) and [Trail of Bits](https://www.trailofbits.com/).
+You may find the Code 423n4 reports [here](https://code423n4.com/reports/2021-05-yield/) and [here](https://code423n4.com/reports/2021-08-yield/), and the Trail of Bits report [here](https://github.com/trailofbits/publications/blob/master/reviews/YieldV2.pdf).
 
 ## Community
 
@@ -49,6 +51,8 @@ Users and the development team are usually in the [Discord server](http://discor
 ## Bug Bounty
 
 We are offering bounties for bugs disclosed to us at [immunefi.com](https://immunefi.com/bounty/yieldprotocol). The bounty reward is up to $250,000, depending on severity. Please include full details of the vulnerability and steps/code to reproduce. We ask that you permit us time to review and remediate any findings before public disclosure.
+
+Known bugs are listed in [this public repo](https://github.com/yieldprotocol/bugs/issues).
 
 ### Contributing
 
@@ -60,7 +64,7 @@ Yield Protocol does not currently have a governance token. Currently, most of th
 
 ## We Are Hiring
 
-You can check out our open roles here on our [careers](https://yieldprotocol.com/careers) page.
+You can check out our open roles [here](https://yield-protocol.breezy.hr/).
 
 ## Useful Links
 

@@ -23,8 +23,11 @@ To compensate lenders who do not redeem fyTokens right away, after maturity they
 
 #### Maturity
 
-If you own fyDai after maturity, you will start to earn the Dai Savings Rate on your fyDai, until you decide to redeem it for Dai.
+If you own fyDai after maturity, you may be paid interest after maturity. Currently, you will start to earn the Compound Dai Lending rate on your fyDai, until you decide to redeem it for Dai. Other fyTokens (such as fyFRAX) do not pay interest. 
 
  ![](../assets/redemption.png)
 
  [Edit this page](https://github.com/yieldprotocol/docs-v2/edit/main/users/lending.md)
+ 
+Interest paid on mature fyTokens may be necessary to encourage users to lend on the protocol and to not immediately redeem at maturity. However, since borrowers can pay back after maturity, it is possible for fyTokens to exist that are not backed by a loan. Because the protocol does not automatically re-lend funds deposited to pay off previous loans, the protocol can lose money over time. However, because the interest on fyTokens is earned over time, only after maturity, and only results in losses if there is an imbalance in redemptions versus repayments, it is not currently expected to result in significant losses. Furthermore, any losses can be mitigated by turning off interest paid on mature fyTokens or by adding fees when loans are created. 
+
