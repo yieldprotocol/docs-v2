@@ -24,6 +24,7 @@
                 - [Witch](/developers/contracts/Witch.md "Witch")
     - [Feature Building](/developers/feature_building.md "Yield Protocol Docs | Feature Building")
     - [Governance](/developers/governance.md "Yield Protocol Docs | Governance")
+    - [Liquidations](/developers/liquidations.md "Yield Protocol Docs | Liquidations")
     - [Emergencies](/developers/emergencies.md "Yield Protocol Docs | Emergencies")
     - [Technical Reference](developers/technical_reference/)
 - [Operations](/operations/ "Yield Protocol Docs | Operations")
