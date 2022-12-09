@@ -11,6 +11,7 @@
     <!-- - [Governance](users/governance.md "Yield Protocol Docs | Users Governance") -->
 - [Developers](/developers/ "Yield Protocol Docs | Developers")
     - [Addresses](/developers/addresses.md "Yield Protocol Docs | Addresses")
+    - [Identifiers](/developers/identifiers.md "Yield Protocol Docs | Identifiers")
     - [Smart Contract Overview](/developers/smart_contracts_overview.md "Yield Protocol Docs | Smart Contract Overview")
         - [Contracts]("Contracts")
             - [Core]("Core")
