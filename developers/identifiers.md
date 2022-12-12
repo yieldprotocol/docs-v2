@@ -19,7 +19,8 @@ The six bytes of an identifier get divided in 12 hexadecimal characters.
 
 ### Type
 0 - Series
-1:2 - Reserved
+1 - Strategy
+2 - Reserved
 3 - Basic asset, potentially a base
 4 - Series from other providers as assets
 5:C - Reserved
@@ -45,18 +46,16 @@ For series, number of canonical months between the epoch and maturity.
 For other assets, it can be used as versioning.
 
 ### Examples
-The naming scheme was designed so the existing basic assets would fit with their current identifiers. Some derivatives have basic identifiers such as wstEth or yvUSDC, which is incorrect but we hope won't be an issue. Series, FCash and fyToken as collateral also have incorrect identifiers but those will be eventuall phased out and will only take out some of the basic identifiers slots.
+The naming scheme was designed so the existing basic assets would fit with their current identifiers. Some derivatives have basic identifiers such as wstEth or yvUSDC, which are incorrect but can be remediated by adding those collaterals again. Series, FCash and fyToken as collateral also have incorrect identifiers but those will be eventually phased out and will only take out some of the basic identifiers slots.
 
 ETH =  3 030 00 000 000 (Basic asset, ETH, Not set)
 DAI =  3 031 00 000 000 (Basic asset, DAI, Not set)
 USDC = 3 032 00 000 000 (Basic asset, USDC, Not set)
 FRAX = 3 138 00 000 000 (Basic asset, FRAX, Not set)
-
 FYETHDEC22 = 0 030 FF 285 (Series, ETH, Yield, 645 canonical months since epoch in hexadecimal).
-Note that Yield Series can also be collaterals, using the same identifier.
-
 FETHDEC22 = 4 030 10 285 (FCash collateral, ETH, Notional, 645 canonical months since epoch in hexadecimal).
-
+YSDAI6MJD = 1 031 FF 000 000 (Strategy, DAI, first instance)
+YSDAI6MMS = 1 031 FF 000 001 (Strategy, DAI, second instance)
 CRV = 3 040 11 000 (Basic asset, CRV, Curve)
 CVX3CRV = D 040 12 000 (Derivartive asset, CRV, Convex)
 
