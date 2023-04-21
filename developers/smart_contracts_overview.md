@@ -234,10 +234,10 @@ _Other Features_
 
 Bundling of discrete governance actions into useful governance features.
 
-*Add asset*: Adding an asset involves registering it in the Cauldron, deploying a Join for it, registering the Join in the Ladle, and permissioning the Ladle to use the Join.
-*Make base*: Making a base out of an existing asset involves setting an oracle for its borrowing rate in the Cauldron, and allowing the Witch to put base into its join during liquidations.
-*Make ilk*: Making an ilk out of an existing asset, for a given base, involves setting a spot oracle for the base/ilk pair in the Cauldron, setting debt limits in the Cauldron, and allowing the Witch to take such ilk out of its Join during liquidations.
-*Add series*: Adding a series is a costly process in terms of gas. It involves deploying the related fyToken, registering it in the Cauldron, and approving a number of ilks to be used as collateral when borrowing it. The fyToken also need to be given access to the Join for its underlying. The Ladle must be given permission to mint and burn the added fyToken. A Pool to trade between the fyToken and its underlying must be deployed, and registered in the Ladle.
+* _Add asset_: Adding an asset involves registering it in the Cauldron, deploying a Join for it, registering the Join in the Ladle, and permissioning the Ladle to use the Join.
+* _Make base_: Making a base out of an existing asset involves setting an oracle for its borrowing rate in the Cauldron, and allowing the Witch to put base into its join during liquidations.
+* _Make ilk_: Making an ilk out of an existing asset, for a given base, involves setting a spot oracle for the base/ilk pair in the Cauldron, setting debt limits in the Cauldron, and allowing the Witch to take such ilk out of its Join during liquidations.
+* _Add series_: Adding a series is a costly process in terms of gas. It involves deploying the related fyToken, registering it in the Cauldron, and approving a number of ilks to be used as collateral when borrowing it. The fyToken also need to be given access to the Join for its underlying. The Ladle must be given permission to mint and burn the added fyToken. A Pool to trade between the fyToken and its underlying must be deployed, and registered in the Ladle.
 
 # YieldSpace
 
